@@ -519,6 +519,10 @@ ul {
 .swiper-button-prev {
   display: none !important;
 }
+.f-cart {
+  font-size: 32px !important;
+  padding: 10px;
+}
 /* contact section */
 .contact-sec {
   background: url("../assets/CONTACT\ US\ SECTION.png") no-repeat center/cover;
@@ -1283,7 +1287,7 @@ ul {
   .second-footer-links li a {
     transform: translateX(-12px);
   }
-  
+
   .footer-hdr,
   .f-last-hdr {
     transform: none;

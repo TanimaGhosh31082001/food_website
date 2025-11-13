@@ -232,6 +232,10 @@ span {
   text-align: center;
   margin-top: 15px;
 }
+.f-cart {
+  font-size: 32px !important;
+  padding: 10px;
+}
 
 /* footer section */
 .footer-sec {
