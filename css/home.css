@@ -1283,6 +1283,7 @@ ul {
   .second-footer-links li a {
     transform: translateX(-12px);
   }
+  
   .footer-hdr,
   .f-last-hdr {
     transform: none;
