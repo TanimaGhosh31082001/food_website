@@ -2122,3 +2122,37 @@ input:focus {
 .btn-53:hover span:nth-child(5) {
   transition-delay: 0.4s;
 }
+
+
+/* nav media section */
+@media screen and (max-width: 576px) {
+  .navbar-collapse {
+    overflow: visible !important;
+    position: relative;
+  }
+
+  .nav-item.dropdown {
+    position: relative;
+    z-index: 1000;
+  }
+
+  .nav-item.dropdown .sub-menu {
+    position: fixed !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background: rgba(0, 0, 0, 0.95);
+    border: 1px solid var(--primary-color);
+    border-radius: 16px;
+    z-index: 99999 !important;
+    width: 85%;
+    max-width: 320px;
+    padding: 15px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: popupFade 0.3s ease forwards;
+  }
+
+
+}
