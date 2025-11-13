@@ -446,7 +446,7 @@ textarea:focus {
   color: orange;
 }
 /* nav-media section */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .nav-cart-img {
     display: none;
   }
@@ -484,6 +484,61 @@ textarea:focus {
   .navbar-collapse {
     margin-top: 30px;
   }
+} */
+
+@media (max-width: 991.98px) {
+  .navbar-toggler {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+
+  /* ✅ Let Bootstrap control display, only change layout */
+  .navbar-collapse {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: none !important;
+  }
+
+  /* ✅ Only force flex when visible */
+  .navbar-collapse.collapse.show {
+    display: flex !important;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    text-align: center;
+  }
+
+  .nav-cart-icon {
+    display: none;
+  }
+
+  .nav-btn-sec .login-btn {
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+    padding: 10px 35px !important;
+    transform: translateX(-37px);
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-nav .nav-item {
+    width: 100%;
+    transform: translateX(18px);
+  }
+
+  .nav-btn-sec .login-btn {
+    transform: translateX(-15px);
+  }
 }
 
 /* banner media section */
@@ -508,7 +563,9 @@ textarea:focus {
     margin-bottom: 30px;
     text-align: center;
   }
-
+  .second-footer-links li a {
+    transform: translateX(-12px);
+  }
   .footer-hdr,
   .f-last-hdr {
     transform: none;
