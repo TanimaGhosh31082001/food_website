@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Page</title>
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- font awsome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- swipper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/menu.css" />
+  </head>
+  <body>
+    <!-- pre loader -->
+    <div id="preloader">
+      <div class="steam">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <img src="./log_in/loader-img.png" alt="Burger Loader" class="burger" />
+
+
+      <div class="loader">
+        <span>Loading</span>
+        <div class="words">
+          <span class="word">Delicious</span>
+          <span class="word">Juicy</span>
+          <span class="word">Hot</span>
+          <span class="word">Tasty</span>
+          <span class="word">Fresh</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- header section -->
+    <header class="hdr-sec">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container custom-container">
+          <div class="nav-logo">
+            <a class="navbar-brand" href="./index.html">
+              <img src="./assets/nav-logo.png" alt="" />
+            </a>
+          </div>
+          <!-- toggler -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="./menu.html">Menu</a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="./menu.html">
+                  Menu <i class="fa-solid fa-caret-down"></i>
+                </a>
+                <ul class="sub-menu">
+                  <li><a class="menu-list" href="#">Indian</a></li>
+                  <li><a class="menu-list" href="#">Chinese</a></li>
+                  <li><a class="menu-list" href="#">Japanese</a></li>
+                  <li><a class="menu-list" href="#">Italian</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./chef.html">Chef</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="nav-btn-sec d-flex align-items-center">
+              <ul class="nav-cart-img me-2">
+                <li>
+                  <a href="">
+                    <!-- <img src="./assets/basket.png" alt="" /> -->
+                    <i class="fa-solid fa-basket-shopping nav-cart-icon"></i>
+                  </a>
+                </li>
+              </ul>
+              <!-- Login Button -->
+              <!-- <button id="openModalBtn" class="login-btn">Login</button> -->
+              <button id="openModalBtn" class="btn-53 login-btn">
+                <div class="original">Login</div>
+                <div class="letters">
+                  <span>L</span>
+                  <span>O</span>
+                  <span>G</span>
+                  <span>I</span>
+                  <span>N</span>
+                </div>
+              </button>
+
+              <!-- Modal -->
+              <div id="loginModal" class="modal-overlay">
+                <div class="modal-content">
+                  <button class="close-btn" id="closeModalBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+
+                  <div class="modal-body">
+                    <div class="left">
+                      <img src="./log_in/Rectangle 736.png" alt="Cafe" />
+                    </div>
+
+                    <div class="right">
+                      <h2>Login</h2>
+                      <form>
+                        <label for="name">Your Name:</label>
+                        <input
+                          type="text"
+                          id="name"
+                          placeholder="Enter your name"
+                        />
+
+                        <label for="email">Email:</label>
+                        <input
+                          type="email"
+                          id="email"
+                          placeholder="Enter your email"
+                        />
+
+                        <label for="pass">Password:</label>
+                        <input
+                          type="password"
+                          id="pass"
+                          placeholder="Enter your password"
+                        />
+
+                        <div class="submit-sec d-flex">
+                          <a href="#" class="forgot">Forgot Password?</a>
+
+                          <button type="submit" class="submit-btn">
+                            Submit
+                          </button>
+                        </div>
+                      </form>
+
+                      <div class="social">
+                        <div class="facebook d-flex">
+                          Facebook
+                          <img
+                            src="./log_in/facebook-brands-solid-full 1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="facebook">
+                          Google
+                          <img src="./log_in/google-symbol 1.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- banner section -->
+      <section class="banner-sec">
+        <div class="container">
+          <div
+            class="banner-wrpr"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
+            <h1 class="title1">Home / <span> Our Menu</span></h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc
+              varius. Facilisis eget cras sit semper sit enim. Turpis aliquet at
+              ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- food-menu section -->
+      <section class="food-menu-sec">
+        <div class="container">
+          <div
+            class="food-menu-cntn-box"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+          >
+            <h2 class="food-menu-hdr">Our Delicious Menu</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc
+              varius. Facilisis eget cras sit semper sit enim. Turpis aliquet at
+              ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+            </p>
+          </div>
+          <!-- isotope -->
+          <div class="button-group filter-button-group">
+            <button class="btn isotope-btn all" data-filter="*">All</button>
+            <button class="btn isotope-btn Indian" data-filter=".Indian">
+              Indian
+            </button>
+            <button class="btn isotope-btn Italian" data-filter=".Italian">
+              Italian
+            </button>
+            <button class="btn isotope-btn Arabian" data-filter=".Arabian">
+              Arabian
+            </button>
+            <button class="btn isotope-btn Mexican" data-filter=".Mexican">
+              Mexican
+            </button>
+            <button class="btn isotope-btn chinese" data-filter=".chinese">
+              chinese
+            </button>
+            <button class="btn isotope-btn Japanese" data-filter=".Japanese">
+              Japanese
+            </button>
+            <button class="btn isotope-btn Bengali" data-filter=".Bengali">
+              Bengali
+            </button>
+          </div>
+          <div class="grid-sec" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="container">
+              <div class="grid">
+                <!-- first row -->
+                <div class="row">
+                  <div class="grid-item chinese col-lg-3">
+                    <div class="card bg-black food-card">
+                      <div class="food-img-container">
+                        <img
+                          src="./menu.assets/Rectangle 702.png"
+                          class="card-img-top food-img"
+                          alt="Fried Chicken"
+                        />
+                        <i class="fa-solid fa-heart favorite-icon"></i>
+                      </div>
+
+                      <div class="card-body">
+                        <img
+                          class="start-sec"
+                          src="./assets/Frame 261.png"
+                          alt=""
+                        />
+                        <h4 class="card-title food-title">Fried Chicken</h4>
+
+                        <p class="card-text food-text">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry.
+                        </p>
+                        <div class="ruppes-sec d-flex justify-content-between">
+                          <div class="price">Rs.250</div>
+                          <!-- <img src="./assets/Frame 1000002347.png" alt="" /> -->
+                          <i
+                            class="fa-solid fa-basket-shopping fs-2 text-white f-cart"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grid-item Bengali Indian col-lg-3">
+                    <div class="card bg-black food-card">
+                      <div class="food-img-container">
+                        <img
+                          src="./menu.assets/Rectangle 702 (1).png"
+                          class="card-img-top food-img"
+                          alt="Fried Chicken"
+                        />
+                        <i class="fa-solid fa-heart favorite-icon"></i>
+                      </div>
+                      <div class="card-body">
+                        <img
+                          class="start-sec"
+                          src="./assets/Frame 261.png"
+                          alt=""
+                        />
+                        <h4 class="card-title food-title">
+                          Kolkata Style Roll
+                        </h4>
+                        <p class="card-text food-text">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry.
+                        </p>
+                        <div class="ruppes-sec d-flex justify-content-between">
+                          <div class="price">Rs.99</div>
+                          <!-- <img src="./assets/Frame 1000002347.png" alt="" /> -->
+                          <i
+                            class="fa-solid fa-basket-shopping fs-2 text-white f-cart"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grid-item Mexican col-lg-3">
+                    <div class="card bg-black food-card">
+                      <div class="food-img-container">
+                        <img
+                          src="./menu.assets/Rectangle 702 (2).png"
+                          class="card-img-top food-img"
+                          alt="Fried Chicken"
+                        />
+                        <i class="fa-solid fa-heart favorite-icon"></i>
+                      </div>
+                      <div class="card-body">
+                        <img
+                          class="start-sec"
+                          src="./assets/Frame 261.png"
+                          alt=""
+                        />
+                        <h4 class="card-title food-title">Chicken Burger</h4>
+                        <p class="card-text food-text">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry.
+                        </p>
+                        <div class="ruppes-sec d-flex justify-content-between">
+                          <div class="price">Rs.175</div>
+                          <!-- <img src="./assets/Frame 1000002347.png" alt="" /> -->
+                          <i
+                            class="fa-solid fa-basket-shopping fs-2 text-white f-cart"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- second row -->
+                <div class="row">
+                  <div class="grid-item Indian col-lg-3">
+                    <div class="card bg-black food-card">
+                      <div class="food-img-container">
+                        <img
+                          src="./menu.assets/Rectangle 702 (3).png"
+                          class="card-img-top food-img"
+                          alt="Fried Chicken"
+                        />
+                        <i class="fa-solid fa-heart favorite-icon"></i>
+                      </div>
+
+                      <div class="card-body">
+                        <img
+                          class="start-sec"
+                          src="./assets/Frame 261.png"
+                          alt=""
+                        />
+                        <h4 class="card-title food-title">Delhi Style Chole</h4>
+
+                        <p class="card-text food-text">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry.
+                        </p>
+                        <div class="ruppes-sec d-flex justify-content-between">
+                          <div class="price">Rs.156</div>
+                          <!-- <img src="./assets/Frame 1000002347.png" alt="" /> -->
+                          <i
+                            class="fa-solid fa-basket-shopping fs-2 text-white f-cart"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grid-item Italian col-lg-3">
+                    <div class="card bg-black food-card">
+                      <div class="food-img-container">
+                        <img
+                          src="./menu.assets/Rectangle 702 (4).png"
+                          class="card-img-top food-img"
+                          alt="Fried Chicken"
+                        />
+                        <i class="fa-solid fa-heart favorite-icon"></i>
+                      </div>
+                      <div class="card-body">
+                        <img
+                          class="start-sec"
+                          src="./assets/Frame 261.png"
+                          alt=""
+                        />
+                        <h4 class="card-title food-title">Butterscotch Cake</h4>
+                        <p class="card-text food-text">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry.
+                        </p>
+                        <div class="ruppes-sec d-flex justify-content-between">
+                          <div class="price">Rs.159</div>
+                          <!-- <img src="./assets/Frame 1000002347.png" alt="" /> -->
+                          <i
+                            class="fa-solid fa-basket-shopping fs-2 text-white f-cart"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grid-item Japanese col-lg-3">
+                    <div class="card bg-black food-card">
+                      <div class="food-img-container">
+                        <img
+                          src="./menu.assets/Rectangle 702 (5).png"
+                          class="card-img-top food-img"
+                          alt="Fried Chicken"
+                        />
+                        <i class="fa-solid fa-heart favorite-icon"></i>
+                      </div>
+                      <div class="card-body">
+                        <img
+                          class="start-sec"
+                          src="./assets/Frame 261.png"
+                          alt=""
+                        />
+                        <h4 class="card-title food-title">
+                          Chocolate Ice cream
+                        </h4>
+                        <p class="card-text food-text">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry.
+                        </p>
+                        <div class="ruppes-sec d-flex justify-content-between">
+                          <div class="price">Rs.135</div>
+                          <!-- <img src="./assets/Frame 1000002347.png" alt="" /> -->
+                          <i
+                            class="fa-solid fa-basket-shopping fs-2 text-white f-cart"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- third-row -->
+                <div class="row">
+                  <div class="grid-item Arabian Indian Bengali col-lg-3">
+                    <div class="card bg-black food-card">
+                      <div class="food-img-container">
+                        <img
+                          src="./menu.assets/Rectangle 702 (6).png"
+                          class="card-img-top food-img"
+                          alt="Fried Chicken"
+                        />
+                        <i class="fa-solid fa-heart favorite-icon"></i>
+                      </div>
+
+                      <div class="card-body">
+                        <img
+                          class="start-sec"
+                          src="./assets/Frame 261.png"
+                          alt=""
+                        />
+                        <h4 class="card-title food-title">
+                          Hyderabadi Biryani
+                        </h4>
+
+                        <p class="card-text food-text">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry.
+                        </p>
+                        <div class="ruppes-sec d-flex justify-content-between">
+                          <div class="price">Rs.450</div>
+                          <!-- <img src="./assets/Frame 1000002347.png" alt="" /> -->
+                          <i
+                            class="fa-solid fa-basket-shopping fs-2 text-white f-cart"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grid-item Indian Bengali col-lg-3">
+                    <div class="card bg-black food-card">
+                      <div class="food-img-container">
+                        <img
+                          src="./menu.assets/Rectangle 702 (7).png"
+                          class="card-img-top food-img"
+                          alt="Fried Chicken"
+                        />
+                        <i class="fa-solid fa-heart favorite-icon"></i>
+                      </div>
+                      <div class="card-body">
+                        <img
+                          class="start-sec"
+                          src="./assets/Frame 261.png"
+                          alt=""
+                        />
+                        <h4 class="card-title food-title">Masala Dosa</h4>
+                        <p class="card-text food-text">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry.
+                        </p>
+                        <div class="ruppes-sec d-flex justify-content-between">
+                          <div class="price">Rs.199</div>
+                          <!-- <img src="./assets/Frame 1000002347.png" alt="" /> -->
+                          <i
+                            class="fa-solid fa-basket-shopping fs-2 text-white f-cart"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grid-item Bengali Indian col-lg-3">
+                    <div class="card bg-black food-card">
+                      <div class="food-img-container">
+                        <img
+                          src="./menu.assets/Rectangle 702 (8).png"
+                          class="card-img-top food-img"
+                          alt="Fried Chicken"
+                        />
+                        <i class="fa-solid fa-heart favorite-icon"></i>
+                      </div>
+                      <div class="card-body">
+                        <img
+                          class="start-sec"
+                          src="./assets/Frame 261.png"
+                          alt=""
+                        />
+                        <h4 class="card-title food-title">Chicken Samosa</h4>
+                        <p class="card-text food-text">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry.
+                        </p>
+                        <div class="ruppes-sec d-flex justify-content-between">
+                          <div class="price">Rs.85</div>
+                          <!-- <img src="./assets/Frame 1000002347.png" alt="" /> -->
+                          <i
+                            class="fa-solid fa-basket-shopping fs-2 text-white f-cart"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add to Cart Popup -->
+        <div class="add-to-cart-popup" id="addToCartPopup">
+          <div class="popup-content">
+            <button class="close-btn1" id="closePopup">×</button>
+            <div class="popup-left">
+              <img src="" alt="" class="popup-img" />
+            </div>
+            <div class="popup-right">
+              <h3 id="popupTitle">Item Title</h3>
+              <p id="popupDescription">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <div class="price" id="popupPrice">Rs.0</div>
+              <div class="quantity">
+                <button id="decrease">−</button>
+                <span id="quantity">1</span>
+                <button id="increase">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer section -->
+    <footer class="footer-sec" data-aos="fade-right" data-aos-duration="1800">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <div class="footer-cntn-box col-lg-3 col-md-6">
+              <div class="footer-logo">
+                <a href="./index.html">
+                  <img src="./assets/footer-logo.png" alt="" />
+                </a>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Tristique cursus morbi
+                nibh nec et vulputate. Turpis tortor nisi imperdiet quis
+                accumsan. Ligula netus amet leo ultricies. Neque venenatis
+                magnis amet eget sagittis leo enim.
+              </p>
+              <ul class="i-sec d-flex justify-content-evenly f-icon-sec">
+                <li>
+                  <a href="">
+                    <img src="./assets/Facebook.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/Twitter (1).png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/ins.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/Linked.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-cntn-box col-md-6 col-lg-3 text-white">
+              <div class="footer-hdr">Contact Us</div>
+              <ul class="footer-links">
+                <li>
+                  <a href="">infofoodi@gmail.com</a>
+                </li>
+                <li>
+                  <a href="">+91 7029112661</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-cntn-box col-md-6 col-lg-3 text-white">
+              <div class="footer-hdr">User Link</div>
+              <ul class="footer-links">
+                <li>
+                  <a href="">About Us</a>
+                </li>
+                <li>
+                  <a href="">Contact Us</a>
+                </li>
+                <li>
+                  <a href="">Order Delivery</a>
+                </li>
+                <li>
+                  <a href="">Payments & Tex</a>
+                </li>
+                <li>
+                  <a href="">Terms of Services</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-cntn-box col-md-6 col-lg-3 text-white">
+              <div class="f-last-hdr">Location</div>
+              <p>543 Country Club Ave, NC 27587, London, UK +1257 6541120</p>
+              <ul class="pay-icon d-flex justify-content-evenly">
+                <li>
+                  <a href="">
+                    <img src="./assets/Mastercard 1.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/GooglePay 1.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/Visa 1.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/PayPal 1.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div
+            class="footer-bottom-cntn-box d-flex justify-content-between pt-4"
+          >
+             <a href=""class="footer-bottom-para">©2024 ARR, All right reserved</a>
+            <div class="footer-bottom-box d-flex">
+              <div class="policy me-4">Privacy Policy</div>
+              <div class="terms">Terms of Use</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- aos cdn js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- swipper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Isotope Js cdn-->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- custom js -->
+    <script src="./js/menu.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

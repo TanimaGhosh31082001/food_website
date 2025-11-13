@@ -1,0 +1,1283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!-- font awsome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- swipper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/home.css" />
+  </head>
+  <body>
+    <!-- pre loader -->
+    <div id="preloader">
+      <div class="steam">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <img src="./log_in/loader-img.png" alt="Burger Loader" class="burger" />
+
+      <div class="loader">
+        <span>Loading</span>
+        <div class="words">
+          <span class="word">Delicious</span>
+          <span class="word">Juicy</span>
+          <span class="word">Hot</span>
+          <span class="word">Tasty</span>
+          <span class="word">Fresh</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- header section -->
+    <header class="hdr-sec">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container custom-container">
+          <div class="nav-logo">
+            <a class="navbar-brand" href="./index.html">
+              <img src="./assets/nav-logo.png" alt="" />
+            </a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html"
+                  >Home</a
+                >
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="./menu.html">
+                  Menu <i class="fa-solid fa-caret-down"></i>
+                </a>
+                <ul class="sub-menu">
+                  <li><a class="menu-list" href="#">Indian</a></li>
+                  <li><a class="menu-list" href="#">Chinese</a></li>
+                  <li><a class="menu-list" href="#">Japanese</a></li>
+                  <li><a class="menu-list" href="#">Italian</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./chef.html">Chef</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="nav-btn-sec d-flex align-items-center">
+              <ul class="nav-cart-img me-2">
+                <li>
+                  <a href="">
+                    <!-- <img src="./assets/basket.png" alt="" /> -->
+                    <i class="fa-solid fa-basket-shopping nav-cart-icon"></i>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Login Button -->
+              <!-- <button id="openModalBtn" class="login-btn">Login</button> -->
+              <!--  -->
+              <!-- From Uiverse.io by doniaskima -->
+              <button id="openModalBtn" class="btn-53 login-btn">
+                <div class="original">Login</div>
+                <div class="letters">
+                  <span>L</span>
+                  <span>O</span>
+                  <span>G</span>
+                  <span>I</span>
+                  <span>N</span>
+                </div>
+              </button>
+
+              <!--  -->
+              <!-- Modal -->
+              <div id="loginModal" class="modal-overlay">
+                <div class="modal-content">
+                  <button class="close-btn" id="closeModalBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+
+                  <div class="modal-body">
+                    <div class="left">
+                      <img src="./log_in/Rectangle 736.png" alt="Cafe" />
+                    </div>
+
+                    <div class="right">
+                      <h2>Login</h2>
+                      <form>
+                        <label for="name">Your Name:</label>
+                        <input
+                          type="text"
+                          id="name"
+                          placeholder="Enter your name"
+                        />
+
+                        <label for="email">Email:</label>
+                        <input
+                          type="email"
+                          id="email"
+                          placeholder="Enter your email"
+                        />
+
+                        <label for="pass">Password:</label>
+                        <input
+                          type="password"
+                          id="pass"
+                          placeholder="Enter your password"
+                        />
+
+                        <div class="submit-sec d-flex">
+                          <a href="#" class="forgot">Forgot Password?</a>
+
+                          <button type="submit" class="submit-btn">
+                            Submit
+                          </button>
+                        </div>
+                      </form>
+
+                      <div class="social">
+                        <div class="facebook d-flex">
+                          Facebook
+                          <img
+                            src="./log_in/facebook-brands-solid-full 1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="facebook">
+                          Google
+                          <img src="./log_in/google-symbol 1.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- banner section -->
+
+      <section class="banner-sec">
+        <div class="swiper banner-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide banner-slide">
+              <div
+                class="banner-img-wrapper"
+                data-aos="zoom-in"
+                data-aos-duration="1500"
+              >
+                <img
+                  src="./assets/banner-img.png"
+                  alt="Banner 1"
+                  class="banner-img"
+                />
+              </div>
+              <div class="container">
+                <div class="banner-wrpr">
+                  <img src="./assets/Line 3 (1).png" alt="" />
+                  <h3 class="title1">HELLO, NEW FRIEND</h3>
+                  <h1 class="title2">Taste happiness in every bite</h1>
+                  <div class="banner-btn">
+                    <a class="secondary-btn" href="">EXPLORE MENU</a>
+                    <a class="secondary-btn" href="">RESERVATION</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide banner-slide">
+              <div
+                class="banner-img-wrapper"
+                data-aos="zoom-in"
+                data-aos-duration="1500"
+              >
+                <img
+                  src="./assets/background-img-1.jpg"
+                  alt="Banner 2"
+                  class="banner-img"
+                />
+              </div>
+              <div class="container">
+                <div class="banner-wrpr">
+                  <img src="./assets/Line 3 (1).png" alt="" />
+                  <h3 class="title1">WELCOME BACK</h3>
+                  <h1 class="title2">Experience flavor like never before</h1>
+                  <div class="banner-btn">
+                    <a class="secondary-btn" href="">EXPLORE MENU</a>
+                    <a class="secondary-btn" href="">RESERVATION</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide banner-slide">
+              <div
+                class="banner-img-wrapper"
+                data-aos="zoom-in"
+                data-aos-duration="1500"
+              >
+                <img
+                  src="./assets/background-img-4.jpg"
+                  alt="Banner 3"
+                  class="banner-img"
+                />
+              </div>
+              <div class="container">
+                <div class="banner-wrpr">
+                  <img src="./assets/Line 3 (1).png" alt="" />
+                  <h3 class="title1">DISCOVER MORE</h3>
+                  <h1 class="title2">Your new favorite meal awaits</h1>
+                  <div class="banner-btn">
+                    <a class="secondary-btn" href="">EXPLORE MENU</a>
+                    <a class="secondary-btn" href="">RESERVATION</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Swiper navigation -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination banner-swipper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- about section -->
+      <section class="about-sec">
+        <div class="container">
+          <div class="row about-row">
+            <div
+              class="about-cntn col-lg-6"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <h3 class="about-sub-hdr">
+                ABOUT US
+                <img src="./assets/Line 3 (1).png" alt="" />
+              </h3>
+              <h2 class="about-hdr">We Invite You to Visit Our Coffee House</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc
+                varius. Facilisis eget cras sit semper sit enim. Turpis aliquet
+                at ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+              </p>
+              <a class="about-btn" href="">READ MORE</a>
+            </div>
+
+            <div
+              class="about-img col-lg-6"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <img src="./assets/about-img.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- choosing section -->
+      <section class="choose-sec">
+        <div class="container">
+          <div
+            class="choose-main-cntn text-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h3 class="choose-sub-hdr">
+              FEATURES
+              <img src="./assets/Line 3 (1).png" alt="" />
+            </h3>
+            <h2 class="choose-hdr">Why people choose us?</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc
+              varius. Facilisis eget cras sit semper sit enim. Turpis aliquet at
+              ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+            </p>
+          </div>
+          <div class="row g-5">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="card bg-black choose-card"
+                data-aos="flip-left"
+                data-aos-duration="1000"
+              >
+                <img
+                  src="./assets/ic_outline-food-bank.png"
+                  class="card-img-top choose-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h4 class="card-title menu-title">MENU FOR EVERY TEST</h4>
+                  <p class="card-text menu-text">
+                    Lorem ipsum dolor sit amet consectetur. Felis eget sit sit
+                    scelerisque vestibulum. Urna faucibus amet massa lacus
+                    lorem.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="card bg-black choose-card"
+                data-aos="flip-left"
+                data-aos-duration="1000"
+              >
+                <img
+                  src="./assets/Group (10).png"
+                  class="card-img-top choose-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h4 class="card-title menu-title">ALWAYS QUALITY BEANS</h4>
+                  <p class="card-text menu-text">
+                    Lorem ipsum dolor sit amet consectetur. Felis eget sit sit
+                    scelerisque vestibulum. Urna faucibus amet massa lacus
+                    lorem.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="card bg-black choose-card"
+                data-aos="flip-left"
+                data-aos-duration="1000"
+              >
+                <img
+                  src="./assets/fluent-emoji-high-contrast_cook.png"
+                  class="card-img-top choose-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h4 class="card-title menu-title">EXPERIENCED BARISTA</h4>
+                  <p class="card-text menu-text">
+                    Lorem ipsum dolor sit amet consectetur. Felis eget sit sit
+                    scelerisque vestibulum. Urna faucibus amet massa lacus
+                    lorem.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- explore section -->
+      <section class="explore-sec">
+        <div class="container">
+          <div
+            class="explore-main-cntn"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <h3 class="explore-sub-hdr">
+              POPULER MENU
+              <img src="./assets/Line 3 (1).png" alt="" />
+            </h3>
+            <h2 class="explore-hdr">Explore Our Foods</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc
+              varius. Facilisis eget cras sit semper sit enim. Turpis aliquet at
+              ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+            </p>
+          </div>
+          <div class="food-swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black food-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1500"
+                >
+                  <div class="food-img-container">
+                    <img
+                      src="./assets/Rectangle 702.png"
+                      class="card-img-top food-img"
+                      alt="Fried Chicken"
+                    />
+                    <i class="fa-solid fa-heart favorite-icon"></i>
+                  </div>
+
+                  <div class="card-body">
+                    <img
+                      class="start-sec"
+                      src="./assets/Frame 261.png"
+                      alt=""
+                    />
+                    <h4 class="card-title food-title">Fried Chicken</h4>
+
+                    <p class="card-text food-text">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                    <div class="ruppes-sec d-flex justify-content-between">
+                      <div class="price">Rs.250</div>
+                      <!-- <img src="./assets/Frame 1000002347.png" alt="" /> -->
+                      <i
+                        class="fa-solid fa-basket-shopping fs-2 text-white f-cart"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black food-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1500"
+                >
+                  <div class="food-img-container">
+                    <img
+                      src="./assets/Rectangle 702 (1).png"
+                      class="card-img-top food-img"
+                      alt="Fried Chicken"
+                    />
+                    <i class="fa-solid fa-heart favorite-icon"></i>
+                  </div>
+                  <div class="card-body">
+                    <img
+                      class="start-sec"
+                      src="./assets/Frame 261.png"
+                      alt=""
+                    />
+                    <h4 class="card-title food-title">Kolkata Style Roll</h4>
+                    <p class="card-text food-text">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                    <div class="ruppes-sec d-flex justify-content-between">
+                      <div class="price">Rs.99</div>
+                      <!-- <img src="./assets/Frame 1000002347.png" alt="" /> -->
+                      <i
+                        class="fa-solid fa-basket-shopping fs-2 text-white f-cart"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black food-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1500"
+                >
+                  <div class="food-img-container">
+                    <img
+                      src="./assets/Rectangle 702 (2).png"
+                      class="card-img-top food-img"
+                      alt="Fried Chicken"
+                    />
+                    <i class="fa-solid fa-heart favorite-icon"></i>
+                  </div>
+                  <div class="card-body">
+                    <img
+                      class="start-sec"
+                      src="./assets/Frame 261.png"
+                      alt=""
+                    />
+                    <h4 class="card-title food-title">Chicken Burger</h4>
+                    <p class="card-text food-text">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                    <div class="ruppes-sec d-flex justify-content-between">
+                      <div class="price">Rs.175</div>
+                      <!-- <img src="./assets/Frame 1000002347.png" alt="" /> -->
+                      <i
+                        class="fa-solid fa-basket-shopping fs-2 text-white f-cart"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black food-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1500"
+                >
+                  <div class="food-img-container">
+                    <img
+                      src="./assets/Rectangle 702 (1).png"
+                      class="card-img-top food-img"
+                      alt="Fried Chicken"
+                    />
+                    <i class="fa-solid fa-heart favorite-icon"></i>
+                  </div>
+                  <div class="card-body">
+                    <img
+                      class="start-sec"
+                      src="./assets/Frame 261.png"
+                      alt=""
+                    />
+                    <h4 class="card-title food-title">Kolkata Style Roll</h4>
+                    <p class="card-text food-text">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                    <div class="ruppes-sec d-flex justify-content-between">
+                      <div class="price">Rs.99</div>
+                      <!-- <img src="./assets/Frame 1000002347.png" alt="" /> -->
+                      <i
+                        class="fa-solid fa-basket-shopping fs-2 text-white f-cart"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="food-button-next swiper-button-next"></div>
+            <div class="food-button-prev swiper-button-prev"></div>
+            <div class="food-pagination swiper-pagination"></div>
+          </div>
+          <!-- Add to Cart Popup -->
+          <div class="add-to-cart-popup" id="addToCartPopup">
+            <div class="popup-content">
+              <button class="close-btn1" id="closePopup">×</button>
+              <div class="popup-left">
+                <img src="" alt="" class="popup-img" />
+              </div>
+              <div class="popup-right">
+                <h3 id="popupTitle">Item Title</h3>
+                <p id="popupDescription">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <div class="price" id="popupPrice">Rs.0</div>
+                <div class="quantity">
+                  <button id="decrease">−</button>
+                  <span id="quantity">1</span>
+                  <button id="increase">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact section -->
+      <section class="contact-sec">
+        <div class="container">
+          <div class="contact-cntn-box">
+            <div
+              class="contact-left-cntn col-lg-4"
+              data-aos="zoom-in-right"
+              data-aos-duration="1500"
+            >
+              <h3 class="contact-sub-hdr">
+                CONTACT US
+                <img src="./assets/Line 3 (1).png" alt="" />
+              </h3>
+              <h2 class="contact-hdr">Working Hours</h2>
+              <a class="contact-btn" href="">CONTACT US</a>
+            </div>
+            <div
+              class="contact-right-cntn"
+              data-aos="zoom-in-left"
+              data-aos-duration="1500"
+            >
+              <p>Monday to Friday</p>
+              <p class="r-cntn">09:00 AM - 10.00 PM</p>
+              <p>Saturday to Sunday</p>
+              <p>09:00 AM - 07.00 PM</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- chef section  -->
+      <section class="chef-sec">
+        <div class="container">
+          <div
+            class="chef-main-cntn"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <h3 class="chef-sub-hdr">
+              OUR CHEF
+              <img src="./assets/Line 3 (1).png" alt="" />
+            </h3>
+            <h2 class="chef-hdr">Meet our expert chef</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc
+              varius. Facilisis eget cras sit semper sit enim. Turpis aliquet at
+              ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+            </p>
+          </div>
+          <div
+            class="chef-swiper swiper"
+            data-aos="fade-up-left"
+            data-aos-duration="1500"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card bg-black chef-card">
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./assets/team-img-1 1.png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-4 mt-2"
+                    >
+                      Masum Rana
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-5 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card bg-black chef-card">
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./assets/Mask group (27).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Manisha Agarwal
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Senior Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card bg-black chef-card">
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./assets/Mask group (28).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Muhibbur Rashid
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card bg-black chef-card">
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./assets/team-img-1 1 (1).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Rashed Kabir
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card bg-black chef-card">
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./assets/Mask group (28).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Muhibbur Rashid
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- testinominal section -->
+      <section class="testinominal-sec">
+        <div class="container">
+          <div
+            class="testinominal-main-cntn"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <h3 class="testinominal-sub-hdr text-white text-center fs-6">
+              TESTIMONIAL
+              <img src="./assets/Line 3 (1).png" alt="" />
+            </h3>
+            <h2 class="testinominal-hdr text-white text-center fs-3">
+              What our clints say about us?
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc
+              varius. Facilisis eget cras sit semper sit enim. Turpis aliquet at
+              ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+            </p>
+          </div>
+          <div class="testinominal-swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black testinominal-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="./assets/clarity_block-quote-line.png"
+                    class="card-img-top testinominal-img"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <p class="card-text testinominal-text">
+                      From the moment we walked in, everything felt perfect —
+                      the food, the ambiance, and the warm service. It's not
+                      just a meal, it's an experience we keep coming back for.
+                      Highly recommended for anyone who loves great taste and
+                      comfort
+                    </p>
+                    <div class="star-sec mb-3">
+                      <img src="./assets/Frame 261 (1).png" alt="" />
+                    </div>
+                    <div class="user-sec d-flex">
+                      <div class="user-img">
+                        <img src="./assets/Frame 1000002353.png" alt="" />
+                      </div>
+                      <div class="user-box text-white ms-4 fs-3">
+                        <h5>Jerome Bell</h5>
+                        <p class="city">New York, USA</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black testinominal-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="./assets/clarity_block-quote-line (1).png"
+                    class="card-img-top testinominal-img"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <p class="card-text testinominal-text">
+                      From the moment we walked in, everything felt perfect —
+                      the food, the ambiance, and the warm service. It's not
+                      just a meal, it's an experience we keep coming back for.
+                      Highly recommended for anyone who loves great taste and
+                      comfort
+                    </p>
+                    <div class="star-sec mb-3">
+                      <img src="./assets/Frame 261 (2).png" alt="" />
+                    </div>
+                    <div class="user-sec d-flex">
+                      <div class="user-img">
+                        <img src="./assets/Frame 1000002353 (1).png" alt="" />
+                      </div>
+                      <div class="user-box text-white ms-4 fs-3">
+                        <h5>Jacob Jones</h5>
+                        <p class="city">London, UK</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black testinominal-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="./assets/clarity_block-quote-line (2).png"
+                    class="card-img-top testinominal-img"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <p class="card-text testinominal-text">
+                      From the moment we walked in, everything felt perfect —
+                      the food, the ambiance, and the warm service. It's not
+                      just a meal, it's an experience we keep coming back for.
+                      Highly recommended for anyone who loves great taste and
+                      comfort
+                    </p>
+                    <div class="star-sec mb-3">
+                      <img src="./assets/Frame 261 (3).png" alt="" />
+                    </div>
+                    <div class="user-sec d-flex">
+                      <div class="user-img">
+                        <img src="./assets/Frame 1000002353 (2).png" alt="" />
+                      </div>
+                      <div class="user-box text-white ms-4 fs-3">
+                        <h5>Floyd Miles</h5>
+                        <p class="city">New York, USA</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black testinominal-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="./assets/clarity_block-quote-line (1).png"
+                    class="card-img-top testinominal-img"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <p class="card-text testinominal-text">
+                      From the moment we walked in, everything felt perfect —
+                      the food, the ambiance, and the warm service. It's not
+                      just a meal, it's an experience we keep coming back for.
+                      Highly recommended for anyone who loves great taste and
+                      comfort
+                    </p>
+                    <div class="star-sec mb-3">
+                      <img src="./assets/Frame 261 (2).png" alt="" />
+                    </div>
+                    <div class="user-sec d-flex">
+                      <div class="user-img">
+                        <img src="./assets/Frame 1000002353 (1).png" alt="" />
+                      </div>
+                      <div class="user-box text-white ms-4 fs-3">
+                        <h5>Jacob Jones</h5>
+                        <p class="city">London, UK</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testinominal-button-next swiper-button-next"></div>
+            <div class="testinominal-button-prev swiper-button-prev"></div>
+            <div class="testinominal-pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- review feedback section -->
+      <section class="review-fedback py-5">
+        <div class="container">
+          <div
+            class="row feedback-row text-center"
+            data-aos="fade-up-right"
+            data-aos-duration="1500"
+          >
+            <div class="feedback-cntn-box col-12 col-md-6 col-lg-3 text-white">
+              <div class="feedback-number fs-3 fw-bold" data-target="1287">
+                0<span>+</span>
+              </div>
+              <div class="feedback-type fs-6 fw-light">VISITORS DAILY</div>
+            </div>
+            <div class="feedback-cntn-box col-12 col-md-6 col-lg-3 text-white">
+              <div class="feedback-number fs-3 fw-bold" data-target="578">
+                0<span>+</span>
+              </div>
+              <div class="feedback-type fs-6 fw-light">DELIVERIES MONTHLYS</div>
+            </div>
+            <div class="feedback-cntn-box col-12 col-md-6 col-lg-3 text-white">
+              <div class="feedback-number fs-3 fw-bold" data-target="1440">
+                0<span>+</span>
+              </div>
+              <div class="feedback-type fs-6 fw-light">POSITIVE FEEDBACK</div>
+            </div>
+            <div class="feedback-cntn-box col-12 col-md-6 col-lg-3 text-white">
+              <div class="feedback-number fs-3 fw-bold" data-target="40">
+                0<span>+</span>
+              </div>
+              <div class="feedback-type fs-6 fw-light">AWARDS AND HONORS</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ordering section -->
+      <section class="ordering-sec">
+        <div class="container">
+          <div class="row align-items-center">
+            <div
+              class="ordering-cntn-box col-lg-6"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              <div class="ordering-cntn text-white">
+                Simple Way To Order Your Foods
+              </div>
+              <div class="app-icon d-flex">
+                <img src="./assets/Frame 139.png" alt="" />
+                <img src="./assets/Frame 140.png" alt="" />
+              </div>
+            </div>
+            <div
+              class="order-img-box col-lg-6"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+            >
+              <div class="ordering-img">
+                <img src="./assets/APP-1 (1).png" alt="" />
+              </div>
+              <div class="ordering-sub-img">
+                <img src="./assets/APP-2.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- subscribe section -->
+      <section class="subscribe-sec">
+        <div class="container subscribe-container">
+          <div
+            class="subscribe-cntn-box text-white"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h3 class="subscribe-sub-hdr">
+              NEWS LETTER
+              <img src="./assets/Line 3 (1).png" alt="" />
+            </h3>
+            <h2 class="subscribe-hdr">Subscribe Our Newsletter</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc
+              varius. Facilisis eget cras sit semper sit enim. Turpis aliquet at
+              ac eu donec ut.
+            </p>
+            <div class="subscribe-form d-flex">
+              <form action="">
+                <input
+                  type="email"
+                  name=""
+                  id=""
+                  placeholder="Type Your Email Id"
+                  class="sub-form"
+                />
+              </form>
+              <a class="subscribe-btn" href="">SUBSCRIBE</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- footer section -->
+      <footer
+        class="footer-sec"
+        data-aos="fade-up-right"
+        data-aos-duration="1500"
+      >
+        <div class="container">
+          <div class="footer-top">
+            <div class="row">
+              <div class="footer-cntn-box col-lg-3 col-md-6">
+                <div class="footer-logo">
+                  <a href="./index.html">
+                    <img src="./assets/footer-logo.png" alt="" />
+                  </a>
+                </div>
+                <p class="footer-para">
+                  Lorem ipsum dolor sit amet consectetur. Tristique cursus morbi
+                  nibh nec et vulputate. Turpis tortor nisi imperdiet quis
+                  accumsan. Ligula netus amet leo ultricies. Neque venenatis
+                  magnis amet eget sagittis leo enim.
+                </p>
+                <ul class="i-sec d-flex justify-content-evenly f-icon-sec">
+                  <li>
+                    <a href="">
+                      <img src="./assets/Facebook.png" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./assets/Twitter (1).png" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./assets/ins.png" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./assets/Linked.png" alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-cntn-box col-md-6 col-lg-3 text-white">
+                <div class="footer-hdr footer-contact-hdr">Contact Us</div>
+                <ul class="footer-links">
+                  <li>
+                    <a href="">infofoodi@gmail.com</a>
+                  </li>
+                  <li>
+                    <a href="">+91 7029112661</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-cntn-box col-md-6 col-lg-3 text-white">
+                <div class="footer-hdr user-link-hdr">User Link</div>
+                <ul class="footer-links">
+                  <li>
+                    <a href="">About Us</a>
+                  </li>
+                  <li>
+                    <a href="">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="">Order Delivery</a>
+                  </li>
+                  <li>
+                    <a href="">Payments & Tex</a>
+                  </li>
+                  <li>
+                    <a href="">Terms of Services</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-cntn-box col-md-6 col-lg-3 text-white">
+                <div class="f-last-hdr">Location</div>
+                <p>543 Country Club Ave, NC 27587, London, UK +1257 6541120</p>
+                <ul class="pay-icon d-flex justify-content-evenly">
+                  <li>
+                    <a href="">
+                      <img src="./assets/Mastercard 1.png" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./assets/GooglePay 1.png" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./assets/Visa 1.png" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./assets/PayPal 1.png" alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div
+              class="footer-bottom-cntn-box d-flex justify-content-between pt-4"
+            >
+              <a href=""class="footer-bottom-para">©2024 ARR, All right reserved</a>
+              <div class="footer-bottom-box d-flex">
+                <a class="policy me-4">Privacy Policy</a>
+                <a class="terms">Terms of Use</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- aos cdn js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- swipper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom js -->
+    <script src="./js/home.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

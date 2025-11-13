@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chef Page</title>
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- font awsome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- swipper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/chef.css" />
+  </head>
+  <body>
+    <!-- pre loader -->
+    <div id="preloader">
+      <div class="steam">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <img src="./log_in/loader-img.png" alt="Burger Loader" class="burger" />
+
+      <!-- Text Loader -->
+      <div class="loader">
+        <span>Loading</span>
+        <div class="words">
+          <span class="word">Delicious</span>
+          <span class="word">Juicy</span>
+          <span class="word">Hot</span>
+          <span class="word">Tasty</span>
+          <span class="word">Fresh</span>
+        </div>
+      </div>
+    </div>
+    <!-- header section -->
+    <header class="hdr-sec">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container custom-container">
+          <div class="nav-logo">
+            <a class="navbar-brand" href="./index.html">
+              <img src="./assets/nav-logo.png" alt="" />
+            </a>
+          </div>
+          <!-- toggler -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html"
+                  >Home</a
+                >
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="./menu.html">
+                  Menu <i class="fa-solid fa-caret-down"></i>
+                </a>
+                <ul class="sub-menu">
+                  <li><a class="menu-list" href="#">Indian</a></li>
+                  <li><a class="menu-list" href="#">Chinese</a></li>
+                  <li><a class="menu-list" href="#">Japanese</a></li>
+                  <li><a class="menu-list" href="#">Italian</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./chef.html">Chef</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="nav-btn-sec d-flex align-items-center">
+              <ul class="nav-cart-img me-2">
+                <li>
+                  <a href="">
+                    <!-- <img src="./assets/basket.png" alt="" /> -->
+                    <i class="fa-solid fa-basket-shopping nav-cart-icon"></i>
+                  </a>
+                </li>
+              </ul>
+              <!-- Login Button -->
+              <!-- <button id="openModalBtn" class="login-btn">Login</button> -->
+              <button id="openModalBtn" class="btn-53 login-btn">
+                <div class="original">Login</div>
+                <div class="letters">
+                  <span>L</span>
+                  <span>O</span>
+                  <span>G</span>
+                  <span>I</span>
+                  <span>N</span>
+                </div>
+              </button>
+
+              <!-- Modal -->
+              <div id="loginModal" class="modal-overlay">
+                <div class="modal-content">
+                  <button class="close-btn" id="closeModalBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+
+                  <div class="modal-body">
+                    <div class="left">
+                      <img src="./log_in/Rectangle 736.png" alt="Cafe" />
+                    </div>
+
+                    <div class="right">
+                      <h2>Login</h2>
+                      <form>
+                        <label for="name">Your Name:</label>
+                        <input
+                          type="text"
+                          id="name"
+                          placeholder="Enter your name"
+                        />
+
+                        <label for="email">Email:</label>
+                        <input
+                          type="email"
+                          id="email"
+                          placeholder="Enter your email"
+                        />
+
+                        <label for="pass">Password:</label>
+                        <input
+                          type="password"
+                          id="pass"
+                          placeholder="Enter your password"
+                        />
+
+                        <div class="submit-sec d-flex">
+                          <a href="#" class="forgot">Forgot Password?</a>
+
+                          <button type="submit" class="submit-btn">
+                            Submit
+                          </button>
+                        </div>
+                      </form>
+
+                      <div class="social">
+                        <div class="facebook d-flex">
+                          Facebook
+                          <img
+                            src="./log_in/facebook-brands-solid-full 1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="facebook">
+                          Google
+                          <img src="./log_in/google-symbol 1.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- banner section -->
+      <section
+        class="banner-sec"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+      >
+        <div class="container">
+          <div class="banner-wrpr">
+            <h1 class="title1">Home / <span> Our Chef</span></h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc
+              varius. Facilisis eget cras sit semper sit enim. Turpis aliquet at
+              ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- chef section  -->
+      <section class="chef-sec">
+        <div class="container">
+          <div
+            class="chef-main-cntn"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <h3 class="chef-sub-hdr">
+              OUR CHEF
+              <img src="./assets/Line 3 (1).png" alt="" />
+            </h3>
+            <h2 class="chef-hdr">Meet our expert chef</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc
+              varius. Facilisis eget cras sit semper sit enim. Turpis aliquet at
+              ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+            </p>
+          </div>
+          <!-- first row -->
+          <div class="chef-swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./assets/team-img-1 1.png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-4 mt-2"
+                    >
+                      Masum Rana
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-5 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./assets/Mask group (27).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Manisha Agarwal
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Senior Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./assets/Mask group (28).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Muhibbur Rashid
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./assets/team-img-1 1 (1).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Rashed Kabir
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./assets/Mask group (28).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Muhibbur Rashid
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- --------second row---------- -->
+          <div class="chef-swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./chef-assets/Mask group (29).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-4 mt-2"
+                    >
+                      Jame Radley
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-5 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./chef-assets/Mask group (30).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Garima Arora
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Senior Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./chef-assets/team-img-1 1 (2).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Romy Gill
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./chef-assets/team-img-1 1 (3).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Keneth Conroy
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./assets/Mask group (28).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Muhibbur Rashid
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- -third row--- -->
+          <div class="chef-swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./chef-assets/Mask group (34).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-4 mt-2"
+                    >
+                      Esther Howard
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-5 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./chef-assets/Mask group (33).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Robert Fox
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Senior Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./chef-assets/Mask group (32).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Dipna Anand
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./chef-assets/Mask group (31).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Asma Khan
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card bg-black chef-card"
+                  data-aos="flip-up"
+                  data-aos-duration="1500"
+                >
+                  <div class="card-body">
+                    <img
+                      class="chef-img"
+                      src="./assets/Mask group (28).png"
+                      alt=""
+                    />
+                    <h4
+                      class="card-title chef-title text-center text-white fs-25 mt-2"
+                    >
+                      Muhibbur Rashid
+                    </h4>
+                    <p
+                      class="card-text chef-text text-center text-white fw-lighter fs-20 mb-4"
+                    >
+                      Master Chef
+                    </p>
+                    <ul class="i-sec d-flex justify-content-between">
+                      <li>
+                        <a href="">
+                          <img src="./assets/Facebook.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Twitter (1).png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/ins.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/Linked.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer section -->
+    <footer class="footer-sec" data-aos="fade-right" data-aos-duration="1800">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <div class="footer-cntn-box col-lg-3 col-md-6">
+              <div class="footer-logo">
+                <a href="./index.html">
+                  <img src="./assets/footer-logo.png" alt="" />
+                </a>
+              </div>
+              <p class="footer-para">
+                Lorem ipsum dolor sit amet consectetur. Tristique cursus morbi
+                nibh nec et vulputate. Turpis tortor nisi imperdiet quis
+                accumsan. Ligula netus amet leo ultricies. Neque venenatis
+                magnis amet eget sagittis leo enim.
+              </p>
+              <ul class="i-sec d-flex justify-content-evenly f-icon-sec">
+                <li>
+                  <a href="">
+                    <img src="./assets/Facebook.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/Twitter (1).png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/ins.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/Linked.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-cntn-box col-md-6 col-lg-3 text-white">
+              <div class="footer-hdr footer-contact-hdr">Contact Us</div>
+              <ul class="footer-links">
+                <li>
+                  <a href="">infofoodi@gmail.com</a>
+                </li>
+                <li>
+                  <a href="">+91 7029112661</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-cntn-box col-md-6 col-lg-3 text-white">
+              <div class="footer-hdr user-link-hdr">User Link</div>
+              <ul class="footer-links">
+                <li>
+                  <a href="">About Us</a>
+                </li>
+                <li>
+                  <a href="">Contact Us</a>
+                </li>
+                <li>
+                  <a href="">Order Delivery</a>
+                </li>
+                <li>
+                  <a href="">Payments & Tex</a>
+                </li>
+                <li>
+                  <a href="">Terms of Services</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-cntn-box col-md-6 col-lg-3 text-white">
+              <div class="f-last-hdr">Location</div>
+              <p>543 Country Club Ave, NC 27587, London, UK +1257 6541120</p>
+              <ul class="pay-icon d-flex justify-content-evenly">
+                <li>
+                  <a href="">
+                    <img src="./assets/Mastercard 1.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/GooglePay 1.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/Visa 1.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/PayPal 1.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div
+            class="footer-bottom-cntn-box d-flex justify-content-between pt-4"
+          >
+           <a href=""class="footer-bottom-para">©2024 ARR, All right reserved</a>
+            <div class="footer-bottom-box d-flex">
+              <div class="policy me-4">Privacy Policy</div>
+              <div class="terms">Terms of Use</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- aos cdn js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- swipper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom js -->
+    <script src="./js/chef.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

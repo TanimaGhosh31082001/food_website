@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Page</title>
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- font awsome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- swipper css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/about.css" />
+  </head>
+  <body>
+    <!-- pre loader -->
+    <div id="preloader">
+      <div class="steam">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <img src="./log_in/loader-img.png" alt="Burger Loader" class="burger" />
+
+      <!-- Text Loader -->
+      <div class="loader">
+        <span>Loading</span>
+        <div class="words">
+          <span class="word">Delicious</span>
+          <span class="word">Juicy</span>
+          <span class="word">Hot</span>
+          <span class="word">Tasty</span>
+          <span class="word">Fresh</span>
+        </div>
+      </div>
+    </div>
+    <!-- header section -->
+    <header class="hdr-sec">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container custom-container">
+          <div class="nav-logo">
+            <a class="navbar-brand" href="./index.html">
+              <img src="./assets/nav-logo.png" alt="" />
+            </a>
+          </div>
+          <!-- toggler -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html"
+                  >Home</a
+                >
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="./menu.html">
+                  Menu <i class="fa-solid fa-caret-down"></i>
+                </a>
+                <ul class="sub-menu">
+                  <li><a class="menu-list" href="#">Indian</a></li>
+                  <li><a class="menu-list" href="#">Chinese</a></li>
+                  <li><a class="menu-list" href="#">Japanese</a></li>
+                  <li><a class="menu-list" href="#">Italian</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./chef.html">Chef</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="nav-btn-sec d-flex align-items-center">
+              <ul class="nav-cart-img me-2">
+                <li>
+                  <a href="">
+                    <!-- <img src="./assets/basket.png" alt="" /> -->
+                    <i class="fa-solid fa-basket-shopping nav-cart-icon"></i>
+                  </a>
+                </li>
+              </ul>
+              <!-- <button id="openModalBtn" class="login-btn">Login</button> -->
+              <button id="openModalBtn" class="btn-53 login-btn">
+                <div class="original">Login</div>
+                <div class="letters">
+                  <span>L</span>
+                  <span>O</span>
+                  <span>G</span>
+                  <span>I</span>
+                  <span>N</span>
+                </div>
+              </button>
+
+              <!-- Modal -->
+              <div id="loginModal" class="modal-overlay">
+                <div class="modal-content">
+                  <button class="close-btn" id="closeModalBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+
+                  <div class="modal-body">
+                    <div class="left">
+                      <img src="./log_in/Rectangle 736.png" alt="Cafe" />
+                    </div>
+
+                    <div class="right">
+                      <h2>Login</h2>
+                      <form>
+                        <label for="name">Your Name:</label>
+                        <input
+                          type="text"
+                          id="name"
+                          placeholder="Enter your name"
+                        />
+
+                        <label for="email">Email:</label>
+                        <input
+                          type="email"
+                          id="email"
+                          placeholder="Enter your email"
+                        />
+
+                        <label for="pass">Password:</label>
+                        <input
+                          type="password"
+                          id="pass"
+                          placeholder="Enter your password"
+                        />
+
+                        <div class="submit-sec d-flex">
+                          <a href="#" class="forgot">Forgot Password?</a>
+
+                          <button type="submit" class="submit-btn">
+                            Submit
+                          </button>
+                        </div>
+                      </form>
+
+                      <div class="social">
+                        <div class="facebook d-flex">
+                          Facebook
+                          <img
+                            src="./log_in/facebook-brands-solid-full 1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="facebook">
+                          Google
+                          <img src="./log_in/google-symbol 1.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- banner section -->
+      <section class="banner-sec">
+        <div class="container">
+          <div
+            class="banner-wrpr"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
+            <h1 class="title1">Home / <span>About Us</span></h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc
+              varius. Facilisis eget cras sit semper sit enim. Turpis aliquet at
+              ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- provide section -->
+      <section class="provide-sec">
+        <div class="container">
+          <div class="row provide-row">
+            <div
+              class="provide-img col-lg-6"
+              data-aos="fade-up-right"
+              data-aos-duration="1500"
+            >
+              <img src="./about-assets/Subtract (1).png" alt="" />
+              <div class="provide-sub-img">
+                <img src="./about-assets/Rectangle 721.png" alt="" />
+              </div>
+            </div>
+            <div
+              class="provide-cntn col-lg-6"
+              data-aos="fade-up-left"
+              data-aos-duration="1500"
+            >
+              <h2 class="provide-hdr">
+                We provide healthy food for your family
+              </h2>
+              <p>
+                every plate tells a story of fresh ingredients, rich flavors,
+                and a passion for cooking. From the first bite to the last, we
+                aim to make your experience warm, memorable, and full of taste.
+                Whether you join us for a quick meal or a special occasion,
+                we’re here to serve happiness on every plate
+              </p>
+              <a class="secondary-btn" href="">CONTACT US</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- feature section -->
+      <section class="feature-sec" data-aos="fade-up" data-aos-duration="1500">
+        <div class="container">
+          <div class="feature-swiper swiper">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide"
+                data-video="./about-assets/video/video_1.mp4"
+              >
+                <div class="feature-img">
+                  <img src="./about-assets/Image (2).gif" alt="" />
+                  <button class="play-btn">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div
+                class="swiper-slide"
+                data-video="./about-assets/video/video_3.mp4"
+              >
+                <div class="feature-img">
+                  <img src="./about-assets/Image-1.gif" alt="" />
+                  <button class="play-btn">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                data-video="./about-assets/video/video_7.mp4"
+              >
+                <div class="feature-img">
+                  <img src="./about-assets/Frame 1000002456.gif" alt="" />
+                  <button class="play-btn">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                data-video="./about-assets/video/video_5.mp4"
+              >
+                <div class="feature-img">
+                  <img src="./about-assets/Image (1).gif" alt="" />
+                  <button class="play-btn">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                data-video="./about-assets/video/video_9.mp4"
+              >
+                <div class="feature-img">
+                  <img src="./about-assets/Frame 1000002456.gif" alt="" />
+                  <button class="play-btn">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                data-video="./about-assets/video/video_4.mp4"
+              >
+                <div class="feature-img">
+                  <img src="./about-assets/Image (1).gif" alt="" />
+                  <button class="play-btn">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                data-video="./about-assets/video/video_8.mp4"
+              >
+                <div class="feature-img">
+                  <img src="./about-assets/image.gif" alt="" />
+                  <button class="play-btn">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                data-video="./about-assets/video/video_6.mp4"
+              >
+                <div class="feature-img">
+                  <img src="./about-assets/Image-1.gif" alt="" />
+                  <button class="play-btn">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="feature-button-next swiper-button-next"></div>
+            <div class="feature-button-prev swiper-button-prev"></div>
+            <div class="feature-pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- video modal -->
+      <div class="video-modal" id="videoModal">
+        <span class="close-btn">&times;</span>
+        <video id="modalVideo" controls></video>
+      </div>
+      <!-- advantage section -->
+      <section class="advantage-sec">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-12 col-md-6 col-lg-4"
+              data-aos="flip-left"
+              data-aos-duration="1500"
+            >
+              <div class="card bg-black adv-card">
+                <div class="adv-img-box">
+                  <img
+                    src="./about-assets/restaurant-menu 1.png"
+                    class="card-img-top adv-img"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-body adv-card-body">
+                  <h4 class="card-title adv-title">Multi Cuisine</h4>
+                  <p class="card-text adv-text">
+                    In the new era of technology we look in the future with
+                    certainty life.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-lg-4"
+              data-aos="flip-left"
+              data-aos-duration="1500"
+            >
+              <div class="card bg-black adv-card">
+                <div class="adv-img-box">
+                  <img
+                    src="./about-assets/Icon (8).png"
+                    class="card-img-top adv-img"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-body adv-card-body">
+                  <h4 class="card-title adv-title">Easy To Order</h4>
+                  <p class="card-text adv-text">
+                    In the new era of technology we look in the future with
+                    certainty life.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-lg-4"
+              data-aos="flip-left"
+              data-aos-duration="1500"
+            >
+              <div class="card bg-black adv-card">
+                <div class="adv-img-box">
+                  <img
+                    src="./about-assets/timer 1.png"
+                    class="card-img-top adv-img"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-body adv-card-body">
+                  <h4 class="card-title adv-title">Fast Delivery</h4>
+                  <p class="card-text adv-text">
+                    In the new era of technology we look in the future with
+                    certainty life.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- asking section -->
+      <section class="asking-sec">
+        <div class="container">
+          <div
+            class="asking-cntn-box"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
+            <h2 class="asking-hdr">Frequently Asked Question</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc
+              varius. Facilisis eget cras sit semper sit enim. Turpis aliquet
+              asking-secat ac eu donec ut. Sagittis vestibulum at quis non massa
+              netus.
+            </p>
+          </div>
+          <div class="row freq-row">
+            <div
+              class="freq-img-box col-lg-6"
+              data-aos="zoom-in"
+              data-aos-duration="1500"
+            >
+              <img src="./about-assets/Rectangle 727.png" alt="" />
+              <img src="./about-assets/Rectangle 728.png" alt="" />
+              <img src="./about-assets/Rectangle 729.png" alt="" />
+              <img src="./about-assets/Rectangle 730.png" alt="" />
+            </div>
+            <div
+              class="freq-ask-ques col-lg-6"
+              data-aos="zoom-in-left"
+              data-aos-duration="1500"
+            >
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Do you offer home delivery?
+                      <i
+                        class="fa-solid fa-plus icon-toggle ms-auto plus-icon"
+                      ></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      We offer fast and reliable home delivery so you can enjoy
+                      your favorite dishes from the comfort of your home. Just
+                      place your order online, sit back, and relax — our
+                      delivery team will make sure your food arrives hot, fresh,
+                      and right on time!
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Can I book a table online?
+                      <i
+                        class="fa-solid fa-plus icon-toggle ms-auto plus-icon"
+                      ></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      You can easily book your table online through our
+                      reservation page. Just choose your preferred date, time,
+                      and number of guests — we’ll have your table ready when
+                      you arrive. It’s quick, convenient, and ensures you never
+                      have to wait for your favorite dining spot!
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Do you have vegetarian and vegan option?
+                      <i
+                        class="fa-solid fa-plus icon-toggle ms-auto plus-icon"
+                      ></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      We care about every palate and preference. Our menu
+                      includes a wide range of delicious vegetarian and vegan
+                      dishes, all made with fresh ingredients and packed with
+                      flavor. Whether you’re craving a light salad or a hearty
+                      main course, we’ve got plenty of plant-based options to
+                      choose from!
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      What are your opening hours?
+                      <i
+                        class="fa-solid fa-plus icon-toggle ms-auto plus-icon"
+                      ></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      Our doors are open from 10:00 AM to 10:00 PM, so you can
+                      enjoy delicious meals for lunch, dinner, or a cozy evening
+                      snack. Whether you’re dining in or ordering online, we’re
+                      here to serve you fresh and flavorful food all day long!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer section -->
+    <section class="footer-sec" data-aos="fade-right" data-aos-duration="1800">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <div class="footer-cntn-box col-lg-3 col-md-6">
+              <div class="footer-logo">
+                <a href="/index.html">
+                  <img src="./assets/footer-logo.png" alt="" />
+                </a>
+              </div>
+              <p class="footer-para">
+                Lorem ipsum dolor sit amet consectetur. Tristique cursus morbi
+                nibh nec et vulputate. Turpis tortor nisi imperdiet quis
+                accumsan. Ligula netus amet leo ultricies. Neque venenatis
+                magnis amet eget sagittis leo enim.
+              </p>
+              <ul class="i-sec d-flex justify-content-evenly f-icon-sec">
+                <li>
+                  <a href="">
+                    <img src="./assets/Facebook.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/Twitter (1).png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/ins.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/Linked.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-cntn-box col-md-6 col-lg-3 text-white">
+              <div class="footer-hdr footer-contact-hdr">Contact Us</div>
+              <ul class="footer-links">
+                <li>
+                  <a href="">infofoodi@gmail.com</a>
+                </li>
+                <li>
+                  <a href="">+91 7029112661</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-cntn-box col-md-6 col-lg-3 text-white">
+              <div class="footer-hdr user-link-hdr">User Link</div>
+              <ul class="footer-links">
+                <li>
+                  <a href="">About Us</a>
+                </li>
+                <li>
+                  <a href="">Contact Us</a>
+                </li>
+                <li>
+                  <a href="">Order Delivery</a>
+                </li>
+                <li>
+                  <a href="">Payments & Tex</a>
+                </li>
+                <li>
+                  <a href="">Terms of Services</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-cntn-box col-md-6 col-lg-3 text-white">
+              <div class="f-last-hdr">Location</div>
+              <p>543 Country Club Ave, NC 27587, London, UK +1257 6541120</p>
+              <ul class="pay-icon d-flex justify-content-evenly">
+                <li>
+                  <a href="">
+                    <img src="./assets/Mastercard 1.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/GooglePay 1.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/Visa 1.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./assets/PayPal 1.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div
+            class="footer-bottom-cntn-box d-flex justify-content-between pt-4"
+          >
+            <a href="" class="footer-bottom-para"
+              >©2024 ARR, All right reserved</a
+            >
+            <div class="footer-bottom-box d-flex">
+              <div class="policy me-4">Privacy Policy</div>
+              <div class="terms">Terms of Use</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- aos cdn js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- swipper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom js -->
+    <script src="./js/about.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
