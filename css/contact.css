@@ -446,45 +446,6 @@ textarea:focus {
   color: orange;
 }
 /* nav-media section */
-/* @media (max-width: 991px) {
-  .nav-cart-img {
-    display: none;
-  }
-  .nav-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-  }
-  .login-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .navbar-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav-btn-sec {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav-btn-sec .login-btn {
-    display: inline-block;
-    padding: 12px 50px;
-    transform: translateX(-7%);
-  }
-  .navbar-collapse {
-    margin-top: 30px;
-  }
-} */
 
 @media (max-width: 991.98px) {
   .navbar-toggler {
@@ -492,7 +453,6 @@ textarea:focus {
     margin-right: 0 !important;
   }
 
-  /* ✅ Let Bootstrap control display, only change layout */
   .navbar-collapse {
     flex-direction: column !important;
     align-items: center !important;
@@ -500,7 +460,6 @@ textarea:focus {
     transition: none !important;
   }
 
-  /* ✅ Only force flex when visible */
   .navbar-collapse.collapse.show {
     display: flex !important;
   }
@@ -530,7 +489,7 @@ textarea:focus {
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .navbar-nav .nav-item {
     width: 100%;
     transform: translateX(18px);
@@ -558,7 +517,7 @@ textarea:focus {
 
 /* footer media section */
 
-@media (max-width: 993px) {
+@media screen and (max-width: 993px) {
   .footer-cntn-box {
     margin-bottom: 30px;
     text-align: center;
@@ -608,7 +567,7 @@ textarea:focus {
   }
 }
 
-@media (max-width: 746px) {
+@media screen and (max-width: 746px) {
   .footer-sec {
     padding: 40px 0;
   }
@@ -667,7 +626,7 @@ textarea:focus {
 }
 /* -contact media section- */
 
-@media (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
   .contact-cntn {
     width: 100%;
     margin: 0 auto;
@@ -679,7 +638,7 @@ textarea:focus {
     margin: 0 auto;
   }
 }
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .contact-sec {
     padding: 40px 15px;
   }
@@ -771,7 +730,7 @@ textarea:focus {
   background-color: #e48f4a;
 }
 
-/* ===== Modal Overlay ===== */
+/*  Modal Overlay  */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -785,7 +744,7 @@ textarea:focus {
   align-items: center;
 }
 
-/* ===== Modal Box ===== */
+/* Modal Box */
 .modal-content {
   position: relative;
   background-color: #0e1616;
@@ -1036,7 +995,7 @@ input:focus {
     margin-left: 8px;
   }
 
-  /* ===== Fix Close Button Visibility ===== */
+  /*  Close Button  */
   .close-btn {
     position: absolute;
     top: 50px;
@@ -1200,7 +1159,7 @@ input:focus {
     transform: translateY(-400%);
   }
 }
-/* From Uiverse.io by doniaskima */
+/* log in btn */
 .btn-53,
 .btn-53 *,
 .btn-53 :after,
@@ -1345,7 +1304,6 @@ input:focus {
   transition-delay: 0.4s;
 }
 
-
 /* nav media section */
 @media screen and (max-width: 576px) {
   .navbar-collapse {
@@ -1375,6 +1333,4 @@ input:focus {
     text-align: center;
     animation: popupFade 0.3s ease forwards;
   }
-
-
 }

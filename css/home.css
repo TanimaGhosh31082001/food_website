@@ -521,7 +521,13 @@ ul {
 }
 .f-cart {
   font-size: 32px !important;
-  padding: 10px;
+  width: 47px;
+  height: 42px;
+}
+.ruppes-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* contact section */
 .contact-sec {
@@ -926,13 +932,12 @@ ul {
   }
 }
 
-@media (max-width: 991.98px) {
+@media screen and (max-width: 991.98px) {
   .navbar-toggler {
     margin-left: auto !important;
     margin-right: 0 !important;
   }
 
-  /* ✅ Let Bootstrap control display, only change layout */
   .navbar-collapse {
     flex-direction: column !important;
     align-items: center !important;
@@ -940,7 +945,6 @@ ul {
     transition: none !important;
   }
 
-  /* ✅ Only force flex when visible */
   .navbar-collapse.collapse.show {
     display: flex !important;
   }
@@ -970,7 +974,7 @@ ul {
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .navbar-nav .nav-item {
     width: 100%;
     transform: translateX(18px);
@@ -980,46 +984,6 @@ ul {
     transform: translateX(-15px);
   }
 }
-
-/* @media (max-width: 991px) {
-  .nav-cart-img {
-    display: none;
-  }
-  .nav-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-  }
-  .login-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .navbar-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav-btn-sec {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav-btn-sec .login-btn {
-    display: inline-block;
-    padding: 12px 50px;
-    transform: translateX(-7%);
-  }
-  .navbar-collapse {
-    margin-top: 30px;
-  }
-} */
 
 /* banner media section */
 @media screen and (max-width: 576px) {
@@ -1184,7 +1148,7 @@ ul {
 
 /* ordering media section */
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .ordering-sec {
     padding: 60px 0;
     min-height: auto;
@@ -1213,7 +1177,7 @@ ul {
     left: 42%;
   }
 }
-@media (max-width: 746px) {
+@media screen and (max-width: 746px) {
   .ordering-img img {
     max-width: 200px;
     margin: 0 auto;
@@ -1225,7 +1189,7 @@ ul {
     text-align: center;
   }
 }
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .order-img-box {
     margin-top: 50px;
   }
@@ -1247,7 +1211,7 @@ ul {
   }
 }
 /* ---subscribe media section-- */
-@media (max-width: 746px) {
+@media screen and (max-width: 746px) {
   .subscribe-container {
     min-height: auto;
     padding: 60px 20px;
@@ -1279,7 +1243,7 @@ ul {
 }
 /* footer media section */
 
-@media (max-width: 993px) {
+@media screen and (max-width: 993px) {
   .footer-cntn-box {
     margin-bottom: 30px;
     text-align: center;
@@ -1327,7 +1291,7 @@ ul {
   }
 }
 
-@media (max-width: 746px) {
+@media screen and (max-width: 746px) {
   .footer-sec {
     padding: 40px 0;
   }
@@ -1412,7 +1376,7 @@ ul {
   background-color: #e48f4a;
 }
 
-/* ===== Modal Overlay ===== */
+/* Modal Overlay */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -1426,7 +1390,7 @@ ul {
   align-items: center;
 }
 
-/* ===== Modal Box ===== */
+/* Modal Box */
 .modal-content {
   position: relative;
   background-color: #0e1616;
@@ -1577,7 +1541,7 @@ input:focus {
   margin-top: 10px;
 }
 /* log in media */
-@media (max-width: 993px) {
+@media screen and (max-width: 993px) {
   /* Center the modal properly */
   .modal-overlay {
     justify-content: center;
@@ -1704,7 +1668,7 @@ input:focus {
     font-size: 14px;
   }
 }
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .left img {
     width: 308px;
     max-width: 100%;
@@ -1929,7 +1893,7 @@ input:focus {
   transition: 0.5s linear;
 } */
 /* food cart popup media responsive */
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .add-to-cart-popup {
     width: 90%;
     padding: 20px;
@@ -1978,7 +1942,7 @@ input:focus {
   }
 }
 /* ---------- */
-/* From Uiverse.io by doniaskima */
+/*log in btn */
 .btn-53,
 .btn-53 *,
 .btn-53 :after,
@@ -2123,7 +2087,6 @@ input:focus {
   transition-delay: 0.4s;
 }
 
-
 /* nav media section */
 @media screen and (max-width: 576px) {
   .navbar-collapse {
@@ -2153,6 +2116,4 @@ input:focus {
     text-align: center;
     animation: popupFade 0.3s ease forwards;
   }
-
-
 }

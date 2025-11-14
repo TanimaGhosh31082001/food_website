@@ -236,6 +236,16 @@ span {
   font-size: 32px !important;
   padding: 10px;
 }
+.f-cart {
+  font-size: 32px !important;
+  width: 47px;
+  height: 42px;
+}
+.ruppes-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* footer section */
 .footer-sec {
@@ -352,13 +362,12 @@ span {
 }
 /* nav media section */
 
-@media (max-width: 991.98px) {
+@media screen and (max-width: 991.98px) {
   .navbar-toggler {
     margin-left: auto !important;
     margin-right: 0 !important;
   }
 
-  /* ✅ Let Bootstrap control display, only change layout */
   .navbar-collapse {
     flex-direction: column !important;
     align-items: center !important;
@@ -366,7 +375,6 @@ span {
     transition: none !important;
   }
 
-  /* ✅ Only force flex when visible */
   .navbar-collapse.collapse.show {
     display: flex !important;
   }
@@ -396,7 +404,7 @@ span {
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .navbar-nav .nav-item {
     width: 100%;
     transform: translateX(18px);
@@ -408,45 +416,7 @@ span {
 }
 
 /* 
-@media (max-width: 991px) {
-  .nav-cart-img {
-    display: none;
-  }
-  .nav-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-  }
-  .login-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .navbar-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .nav-btn-sec {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav-btn-sec .login-btn {
-    display: inline-block;
-    padding: 12px 50px;
-    transform: translateX(-7%);
-  }
-  .navbar-collapse {
-    margin-top: 30px;
-  }
-} */
 
 /* banner media section */
 @media screen and (max-width: 746px) {
@@ -464,7 +434,7 @@ span {
 }
 /* footer media section */
 
-@media (max-width: 993px) {
+@media screen and (max-width: 993px) {
   .footer-cntn-box {
     margin-bottom: 30px;
     text-align: center;
@@ -505,7 +475,7 @@ span {
   }
 }
 
-@media (max-width: 746px) {
+@media screen and (max-width: 746px) {
   .footer-sec {
     padding: 40px 0;
   }
@@ -660,7 +630,7 @@ span {
   transform: scale(1.2);
 }
 /* food menu media */
-@media (max-width: 993px) {
+@media screen and (max-width: 993px) {
   .food-menu-cntn-box {
     text-align: center;
     padding: 0 15px;
@@ -728,7 +698,7 @@ span {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /* Section header */
   .food-menu-cntn-box {
     text-align: center;
@@ -806,7 +776,7 @@ span {
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .grid-item {
     width: 100%;
   }
@@ -997,7 +967,7 @@ input:focus {
   margin-top: 10px;
 }
 /* log in media */
-@media (max-width: 993px) {
+@media screen and (max-width: 993px) {
   /* Center the modal properly */
   .modal-overlay {
     justify-content: center;
@@ -1097,7 +1067,7 @@ input:focus {
     margin-left: 8px;
   }
 
-  /* ===== Fix Close Button Visibility ===== */
+  /* Fix Close Button Visibility  */
   .close-btn {
     position: absolute;
     top: 50px;
@@ -1124,7 +1094,7 @@ input:focus {
     font-size: 14px;
   }
 }
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .left img {
     width: 308px;
     max-width: 100%;
@@ -1444,7 +1414,7 @@ input:focus {
     font-size: 22px;
   }
 }
-/* From Uiverse.io by doniaskima */
+/* log in btn */
 .btn-53,
 .btn-53 *,
 .btn-53 :after,
@@ -1589,7 +1559,6 @@ input:focus {
   transition-delay: 0.4s;
 }
 
-
 /* nav media section */
 @media screen and (max-width: 576px) {
   .navbar-collapse {
@@ -1619,6 +1588,4 @@ input:focus {
     text-align: center;
     animation: popupFade 0.3s ease forwards;
   }
-
-
 }

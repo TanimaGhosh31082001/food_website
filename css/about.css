@@ -657,54 +657,13 @@ span {
   transition: 0.5s linear;
 }
 /* nav media section */
-/* 
-@media (max-width: 991px) {
-  .nav-cart-img {
-    display: none;
-  }
-  .nav-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-  }
-  .login-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .navbar-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .nav-btn-sec {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav-btn-sec .login-btn {
-    display: inline-block;
-    padding: 12px 50px;
-    transform: translateX(-7%);
-  }
-  .navbar-collapse {
-    margin-top: 30px;
-  }
-} */
-
-@media (max-width: 991.98px) {
+@media screen and (max-width: 991.98px) {
   .navbar-toggler {
     margin-left: auto !important;
     margin-right: 0 !important;
   }
 
-  /* ✅ Let Bootstrap control display, only change layout */
   .navbar-collapse {
     flex-direction: column !important;
     align-items: center !important;
@@ -712,7 +671,6 @@ span {
     transition: none !important;
   }
 
-  /* ✅ Only force flex when visible */
   .navbar-collapse.collapse.show {
     display: flex !important;
   }
@@ -742,7 +700,7 @@ span {
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .navbar-nav .nav-item {
     width: 100%;
     transform: translateX(18px);
@@ -770,7 +728,7 @@ span {
 
 /*provide media section */
 
-@media (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
   .provide-sec {
     padding: 100px 0;
   }
@@ -792,7 +750,7 @@ span {
     right: -70px;
   }
 }
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .provide-sec {
     padding: 100px 0;
   }
@@ -823,7 +781,7 @@ span {
     font-size: 15px;
   }
 }
-@media (max-width: 993px) {
+@media screen and (max-width: 993px) {
   .provide-img {
     margin: 0 auto;
   }
@@ -847,7 +805,7 @@ span {
     margin-top: 30px;
   }
 }
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .provide-img {
     max-width: 273px;
     position: relative;
@@ -864,7 +822,7 @@ span {
   }
 }
 /* future media section */
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .feature-img img {
     max-height: 300px;
     margin: 0 auto;
@@ -872,7 +830,7 @@ span {
     max-width: 100%;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .feature-img img {
     max-height: 260px;
     max-width: 100vw;
@@ -881,13 +839,13 @@ span {
 }
 
 /*advantage media section */
-@media (max-width: 746px) {
+@media screen and (max-width: 746px) {
   .adv-card {
     margin: 0 auto;
   }
 }
 /* asking media section */
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .freq-row {
     flex-direction: column-reverse;
     align-items: center;
@@ -906,7 +864,7 @@ span {
     width: 100%;
   }
 }
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .asking-sec {
     padding: 40px 15px;
   }
@@ -946,7 +904,7 @@ span {
 }
 /* footer media section */
 
-@media (max-width: 993px) {
+@media screen and (max-width: 993px) {
   .footer-cntn-box {
     margin-bottom: 30px;
     text-align: center;
@@ -993,7 +951,7 @@ span {
   }
 }
 
-@media (max-width: 746px) {
+@media screen and (max-width: 746px) {
   .footer-sec {
     padding: 40px 0;
   }
@@ -1060,7 +1018,7 @@ span {
   background-color: #e48f4a;
 }
 
-/* ===== Modal Overlay ===== */
+/*--- Modal Overlay ---*/
 .modal-overlay {
   display: none;
   position: fixed;
@@ -1074,7 +1032,7 @@ span {
   align-items: center;
 }
 
-/* ===== Modal Box ===== */
+/*-- Modal Box --*/
 .modal-content {
   position: relative;
   background-color: #0e1616;
@@ -1110,7 +1068,7 @@ span {
   border-color: #b25f1f;
 }
 
-/* ===== Modal Body ===== */
+/* ---- Modal Body ---- */
 .modal-body {
   display: flex;
   gap: 20px;
@@ -1225,8 +1183,7 @@ input:focus {
   margin-top: 10px;
 }
 /* log in media */
-@media (max-width: 993px) {
-  /* Center the modal properly */
+@media screen and (max-width: 993px) {
   .modal-overlay {
     justify-content: center;
     align-items: center;
@@ -1325,7 +1282,7 @@ input:focus {
     margin-left: 8px;
   }
 
-  /* ===== Fix Close Button Visibility ===== */
+  /*  Close Button*/
   .close-btn {
     position: absolute;
     top: 50px;
@@ -1352,7 +1309,7 @@ input:focus {
     font-size: 14px;
   }
 }
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .left img {
     width: 308px;
     max-width: 100%;
@@ -1489,7 +1446,7 @@ input:focus {
     transform: translateY(-400%);
   }
 }
-/* From Uiverse.io by doniaskima */
+/* log in btn */
 .btn-53,
 .btn-53 *,
 .btn-53 :after,
@@ -1663,6 +1620,4 @@ input:focus {
     text-align: center;
     animation: popupFade 0.3s ease forwards;
   }
-
-
 }
