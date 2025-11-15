@@ -435,6 +435,12 @@ span {
 /* footer media section */
 
 @media screen and (max-width: 993px) {
+  .i-sec li a img {
+    margin-right: 8px;
+  }
+  .pay-icon li a img {
+    margin-right: 8px;
+  }
   .footer-cntn-box {
     margin-bottom: 30px;
     text-align: center;
