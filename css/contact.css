@@ -492,7 +492,7 @@ textarea:focus {
 @media screen and (max-width: 576px) {
   .navbar-nav .nav-item {
     width: 100%;
-    transform: translateY(40px);
+    transform: translateX(18px);
   }
 
   .nav-btn-sec .login-btn {
