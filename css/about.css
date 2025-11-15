@@ -703,7 +703,8 @@ span {
 @media screen and (max-width: 576px) {
   .navbar-nav .nav-item {
     width: 100%;
-    transform: translateX(18px);
+    /* transform: translateX(18px); */
+    transform: translateY(40px);
   }
 
   .nav-btn-sec .login-btn {
