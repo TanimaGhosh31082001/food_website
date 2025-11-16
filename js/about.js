@@ -1,4 +1,3 @@
-
 const featureSwiper = new Swiper(".feature-swiper", {
   loop: true,
   centeredSlides: true,
@@ -17,11 +16,9 @@ const featureSwiper = new Swiper(".feature-swiper", {
   },
 });
 
-
 const modal = document.getElementById("videoModal");
 const modalVideo = document.getElementById("modalVideo");
 const closeBtn = document.querySelector(".video-modal .close-btn");
-
 
 document.querySelectorAll(".play-btn").forEach((btn) => {
   btn.addEventListener("click", (e) => {
@@ -69,7 +66,6 @@ window.addEventListener("click", (e) => {
   }
 });
 
-
 //pre-loader
 
 window.addEventListener("load", () => {
@@ -79,4 +75,17 @@ window.addEventListener("load", () => {
     preloader.classList.add("hidden");
     content.classList.add("show");
   }, 3000);
+});
+
+//accordian icon change
+
+document.querySelectorAll(".accordion-button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".icon-toggle").forEach((icon) => {
+      icon.classList.replace("fa-minus", "fa-plus");
+    });
+    const icon = btn.querySelector(".icon-toggle");
+    icon.classList.toggle("fa-plus", btn.classList.contains("collapsed"));
+    icon.classList.toggle("fa-minus", !btn.classList.contains("collapsed"));
+  });
 });
