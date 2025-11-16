@@ -2118,3 +2118,14 @@ input:focus {
     animation: popupFade 0.3s ease forwards;
   }
 }
+/* ---subscribe section smooth blend------- */
+.subscribe-sec {
+  background: #1a1a1a;
+  padding: 120px 0;
+
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
