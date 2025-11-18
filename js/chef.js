@@ -70,3 +70,26 @@ closeModalBtn.addEventListener("click", function () {
   document.body.style.overflow = "";
   document.documentElement.style.overflow = "";
 });
+
+
+
+///new overlay background
+const openModalBtn1 = document.getElementById('openModalBtn');
+const closeModalBtn1 = document.getElementById('closeModalBtn');
+const loginModal1 = document.getElementById('loginModal');
+const bodyOverlay = document.getElementById('bodyOverlay');
+
+openModalBtn1.addEventListener('click', () => {
+  loginModal1.style.display = 'flex';
+  bodyOverlay.classList.add('active');
+});
+
+closeModalBtn1.addEventListener('click', () => {
+  loginModal1.style.display = 'none';
+  bodyOverlay.classList.remove('active');
+});
+
+bodyOverlay.addEventListener('click', () => {
+  loginModal1.style.display = 'none';
+  bodyOverlay.classList.remove('active');
+});

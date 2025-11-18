@@ -1401,7 +1401,7 @@ ul {
   display: flex;
   flex-direction: column;
   animation: fadeIn 0.3s ease;
-  top: 150px;
+bottom: 20%;
 }
 .close-btn {
   /* position: absolute; */
@@ -2129,4 +2129,25 @@ input:focus {
     rgba(0, 0, 0, 1) 40%,
     rgba(0, 0, 0, 0) 100%
   );
+}
+
+
+
+/* Full page dark overlay */
+.body-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  z-index: 998; 
+  pointer-events: none; 
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.body-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
 }
