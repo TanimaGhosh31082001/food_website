@@ -987,7 +987,7 @@ input:focus {
     position: relative;
     overflow: visible;
     margin: 0 auto;
-    top: 0;
+    /* top: 0; */
     transform: none;
   }
 
