@@ -136,3 +136,24 @@ window.addEventListener("click", (e) => {
     popup.style.display = "none";
   }
 });
+
+
+
+
+
+//stop scrolling
+const openModalBtn = document.getElementById("openModalBtn");
+const closeModalBtn = document.getElementById("closeModalBtn");
+const loginModal = document.getElementById("loginModal");
+
+openModalBtn.addEventListener("click", function () {
+  loginModal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+  document.documentElement.style.overflow = "hidden";
+});
+
+closeModalBtn.addEventListener("click", function () {
+  loginModal.style.display = "none";
+  document.body.style.overflow = "";
+  document.documentElement.style.overflow = "";
+});

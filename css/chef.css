@@ -616,10 +616,11 @@ span {
   border-radius: 12px;
   width: 70%;
   max-width: 900px;
-  padding: 20px;
+  padding: 7px;
   display: flex;
   flex-direction: column;
   animation: fadeIn 0.3s ease;
+  top: 150px;
 }
 .close-btn {
   /* position: absolute; */
@@ -629,11 +630,11 @@ span {
   font-size: 30px;
   background: transparent;
   color: #e26b11;
-  font-size: 22px;
+  font-size: 16px;
   border: 4px solid #d5630b;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 30px;
   cursor: pointer;
   text-align: center;
   transition: all 0.3s ease;
