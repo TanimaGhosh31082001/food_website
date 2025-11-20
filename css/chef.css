@@ -413,6 +413,7 @@ span {
 
   .navbar-nav .nav-item {
     width: 100%;
+    text-align: center;
   }
 
   .navbar-nav .nav-link {
@@ -432,7 +433,7 @@ span {
     align-items: center !important;
     margin: 0 auto !important;
     padding: 10px 35px !important;
-    transform: translateX(-37px);
+    transform: translateX(-28px);
   }
 }
 
@@ -475,6 +476,17 @@ span {
   }
 }
 /* footer media section */
+@media screen and (max-width: 1400px) {
+  .pay-icon {
+    transform: translateX(-45px);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .pay-icon li a img {
+    transform: translateX(9px);
+    margin-left: 5px;
+  }
+}
 
 @media screen and (max-width: 993px) {
   .i-sec li a img {

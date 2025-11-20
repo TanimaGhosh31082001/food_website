@@ -951,6 +951,7 @@ ul {
 
   .navbar-nav .nav-item {
     width: 100%;
+    text-align: center;
   }
 
   .navbar-nav .nav-link {
@@ -970,7 +971,7 @@ ul {
     align-items: center !important;
     margin: 0 auto !important;
     padding: 10px 35px !important;
-    transform: translateX(-37px);
+    transform: translateX(-28px);
   }
 }
 
@@ -1242,6 +1243,17 @@ ul {
   }
 }
 /* footer media section */
+@media screen and (max-width: 1400px) {
+.pay-icon{
+  transform: translateX(-45px);
+}
+}
+@media screen and (max-width: 1200px) {
+.pay-icon li a img{
+  transform: translateX(9px);
+  margin-left: 5px;
+}
+}
 
 @media screen and (max-width: 993px) {
   .footer-cntn-box {
@@ -1272,7 +1284,6 @@ ul {
   .pay-icon {
     transform: none;
     justify-content: center !important;
-    gap: 15px;
   }
 
   .footer-bottom-cntn-box {
@@ -1288,6 +1299,9 @@ ul {
   }
   .user-link-hdr {
     transform: translateX(5%);
+  }
+  .i-sec li a img{
+    margin-right: 10px;
   }
 }
 
@@ -1310,7 +1324,6 @@ ul {
     justify-content: center !important;
     transform: none;
     flex-wrap: wrap;
-    gap: 10px;
   }
 
   .footer-links li a {
@@ -1322,13 +1335,11 @@ ul {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 10px;
     padding-top: 20px;
   }
 
   .footer-bottom-box {
     flex-direction: column;
-    gap: 8px;
   }
   .user-link-hdr {
     transform: translateX(3%);
@@ -1339,6 +1350,9 @@ ul {
   .terms {
     margin-top: 10px;
     transform: translateX(-12%);
+  }
+  .pay-icon li a img{
+    transform: translateX(-9px);
   }
 }
 /* -------card heart icon--------- */
@@ -1401,7 +1415,7 @@ ul {
   display: flex;
   flex-direction: column;
   animation: fadeIn 0.3s ease;
-bottom: 20%;
+  bottom: 20%;
 }
 .close-btn {
   /* position: absolute; */
@@ -2131,8 +2145,6 @@ input:focus {
   );
 }
 
-
-
 /* Full page dark overlay */
 .body-overlay {
   position: fixed;
@@ -2140,9 +2152,9 @@ input:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); 
-  z-index: 998; 
-  pointer-events: none; 
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 998;
+  pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s ease;
 }

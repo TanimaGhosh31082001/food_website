@@ -475,6 +475,7 @@ span {
 
   .navbar-nav .nav-item {
     width: 100%;
+    text-align: center;
   }
 
   .navbar-nav .nav-link {
@@ -494,7 +495,7 @@ span {
     align-items: center !important;
     margin: 0 auto !important;
     padding: 10px 35px !important;
-    transform: translateX(-37px);
+    transform: translateX(-28px);
   }
 }
 
@@ -532,7 +533,6 @@ span {
   .date p {
     font-size: 8px;
   }
- 
 }
 @media screen and (max-width: 768px) {
   .chef-card {
@@ -541,12 +541,12 @@ span {
 }
 @media (max-width: 746px) {
   .chef-card {
-    max-width: 100%;  
+    max-width: 100%;
     margin: 0 auto;
   }
 
   .chef-img {
-    width: 100%;      
+    width: 100%;
     max-width: 100%;
     height: auto;
   }
@@ -569,14 +569,25 @@ span {
     flex-wrap: wrap;
   }
 
-  .admin, .date, .comment {
+  .admin,
+  .date,
+  .comment {
     margin-right: 5px;
   }
-
 }
 
 /* footer media section */
-
+@media screen and (max-width: 1400px) {
+  .pay-icon {
+    transform: translateX(-45px);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .pay-icon li a img {
+    transform: translateX(9px);
+    margin-left: 5px;
+  }
+}
 @media screen and (max-width: 993px) {
   .i-sec li a img {
     margin-right: 8px;
@@ -1302,10 +1313,6 @@ input:focus {
   }
 }
 
-
-
-
-
 /* Full page dark overlay */
 .body-overlay {
   position: fixed;
@@ -1313,9 +1320,9 @@ input:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); 
-  z-index: 998; 
-  pointer-events: none; 
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 998;
+  pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -1324,6 +1331,3 @@ input:focus {
   opacity: 1;
   pointer-events: auto;
 }
-
-
-
