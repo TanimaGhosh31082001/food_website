@@ -38,7 +38,6 @@ window.addEventListener("click", (e) => {
   }
 });
 
-
 //pre-loader
 
 window.addEventListener("load", () => {
@@ -50,46 +49,53 @@ window.addEventListener("load", () => {
   }, 3000);
 });
 
-
-
-
-
 //stop scrolling
-const openModalBtn = document.getElementById("openModalBtn");
-const closeModalBtn = document.getElementById("closeModalBtn");
-const loginModal = document.getElementById("loginModal");
+// const openModalBtn = document.getElementById("openModalBtn");
+// const closeModalBtn = document.getElementById("closeModalBtn");
+// const loginModal = document.getElementById("loginModal");
 
+// openModalBtn.addEventListener("click", function () {
+//   loginModal.style.display = "flex";
+//   document.body.style.overflow = "hidden";
+//   document.documentElement.style.overflow = "hidden";
+// });
+
+// closeModalBtn.addEventListener("click", function () {
+//   loginModal.style.display = "none";
+//   document.body.style.overflow = "";
+//   document.documentElement.style.overflow = "";
+// });
 openModalBtn.addEventListener("click", function () {
+  const scrollBarWidth =
+    window.innerWidth - document.documentElement.clientWidth;
   loginModal.style.display = "flex";
   document.body.style.overflow = "hidden";
-  document.documentElement.style.overflow = "hidden";
+  document.body.style.paddingRight = scrollBarWidth + "px";
 });
 
 closeModalBtn.addEventListener("click", function () {
   loginModal.style.display = "none";
   document.body.style.overflow = "";
-  document.documentElement.style.overflow = "";
+  document.body.style.paddingRight = "";
 });
-
-
 
 ///new overlay background
-const openModalBtn1 = document.getElementById('openModalBtn');
-const closeModalBtn1 = document.getElementById('closeModalBtn');
-const loginModal1 = document.getElementById('loginModal');
-const bodyOverlay = document.getElementById('bodyOverlay');
+const openModalBtn1 = document.getElementById("openModalBtn");
+const closeModalBtn1 = document.getElementById("closeModalBtn");
+const loginModal1 = document.getElementById("loginModal");
+const bodyOverlay = document.getElementById("bodyOverlay");
 
-openModalBtn1.addEventListener('click', () => {
-  loginModal1.style.display = 'flex';
-  bodyOverlay.classList.add('active');
+openModalBtn1.addEventListener("click", () => {
+  loginModal1.style.display = "flex";
+  bodyOverlay.classList.add("active");
 });
 
-closeModalBtn1.addEventListener('click', () => {
-  loginModal1.style.display = 'none';
-  bodyOverlay.classList.remove('active');
+closeModalBtn1.addEventListener("click", () => {
+  loginModal1.style.display = "none";
+  bodyOverlay.classList.remove("active");
 });
 
-bodyOverlay.addEventListener('click', () => {
-  loginModal1.style.display = 'none';
-  bodyOverlay.classList.remove('active');
+bodyOverlay.addEventListener("click", () => {
+  loginModal1.style.display = "none";
+  bodyOverlay.classList.remove("active");
 });

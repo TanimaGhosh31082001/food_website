@@ -1202,10 +1202,6 @@ input:focus {
   }
 }
 
-
-
-
-
 /* Full page dark overlay */
 .body-overlay {
   position: fixed;
@@ -1213,9 +1209,9 @@ input:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); 
-  z-index: 998; 
-  pointer-events: none; 
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 998;
+  pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -1224,3 +1220,4 @@ input:focus {
   opacity: 1;
   pointer-events: auto;
 }
+/* ---- */

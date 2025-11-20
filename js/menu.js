@@ -142,22 +142,34 @@ window.addEventListener("click", (e) => {
 
 
 //stop scrolling
-const openModalBtn = document.getElementById("openModalBtn");
-const closeModalBtn = document.getElementById("closeModalBtn");
-const loginModal = document.getElementById("loginModal");
+// const openModalBtn = document.getElementById("openModalBtn");
+// const closeModalBtn = document.getElementById("closeModalBtn");
+// const loginModal = document.getElementById("loginModal");
+
+// openModalBtn.addEventListener("click", function () {
+//   loginModal.style.display = "flex";
+//   document.body.style.overflow = "hidden";
+//   document.documentElement.style.overflow = "hidden";
+// });
+
+// closeModalBtn.addEventListener("click", function () {
+//   loginModal.style.display = "none";
+//   document.body.style.overflow = "";
+//   document.documentElement.style.overflow = "";
+// });
 
 openModalBtn.addEventListener("click", function () {
+  const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
   loginModal.style.display = "flex";
   document.body.style.overflow = "hidden";
-  document.documentElement.style.overflow = "hidden";
+  document.body.style.paddingRight = scrollBarWidth + "px"; 
 });
 
 closeModalBtn.addEventListener("click", function () {
   loginModal.style.display = "none";
   document.body.style.overflow = "";
-  document.documentElement.style.overflow = "";
+  document.body.style.paddingRight = ""; 
 });
-
 
 
 ///new overlay background
