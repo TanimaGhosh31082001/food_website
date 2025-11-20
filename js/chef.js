@@ -50,34 +50,44 @@ window.addEventListener("load", () => {
 });
 
 //stop scrolling
-// const openModalBtn = document.getElementById("openModalBtn");
-// const closeModalBtn = document.getElementById("closeModalBtn");
-// const loginModal = document.getElementById("loginModal");
 
-// openModalBtn.addEventListener("click", function () {
-//   loginModal.style.display = "flex";
-//   document.body.style.overflow = "hidden";
-//   document.documentElement.style.overflow = "hidden";
-// });
+const openModalBtn = document.getElementById("openModalBtn");
+const closeModalBtn = document.getElementById("closeModalBtn");
+const loginModal = document.getElementById("loginModal");
 
-// closeModalBtn.addEventListener("click", function () {
-//   loginModal.style.display = "none";
-//   document.body.style.overflow = "";
-//   document.documentElement.style.overflow = "";
-// });
-openModalBtn.addEventListener("click", function () {
-  const scrollBarWidth =
-    window.innerWidth - document.documentElement.clientWidth;
+const fixedElements = document.querySelectorAll("header, .fixed, .sticky");
+
+function getScrollBarWidth() {
+  return window.innerWidth - document.documentElement.clientWidth;
+}
+
+function openModal() {
+  const scrollBarWidth = getScrollBarWidth();
+
   loginModal.style.display = "flex";
-  document.body.style.overflow = "hidden";
-  document.body.style.paddingRight = scrollBarWidth + "px";
-});
 
-closeModalBtn.addEventListener("click", function () {
+  document.body.style.overflow = "hidden";
+  document.documentElement.style.overflow = "hidden";
+
+  document.body.style.paddingRight = scrollBarWidth + "px";
+  fixedElements.forEach((el) => {
+    el.style.paddingRight = scrollBarWidth + "px";
+  });
+}
+
+function closeModal() {
   loginModal.style.display = "none";
+
   document.body.style.overflow = "";
+  document.documentElement.style.overflow = "";
   document.body.style.paddingRight = "";
-});
+  fixedElements.forEach((el) => {
+    el.style.paddingRight = "";
+  });
+}
+
+openModalBtn.addEventListener("click", openModal);
+closeModalBtn.addEventListener("click", closeModal);
 
 ///new overlay background
 const openModalBtn1 = document.getElementById("openModalBtn");
