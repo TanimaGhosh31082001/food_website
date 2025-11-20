@@ -524,18 +524,6 @@ span {
   }
 }
 /* chef media section */
-@media screen and (max-width: 993px) {
-  /* .chef-card {
-    margin: 0 auto;
-    text-align: center;
-  } */
-}
-@media screen and (max-width: 1400px) {
-  /* .chef-card {
-    margin: 0 auto;
-    text-align: center;
-  } */
-}
 
 @media screen and (max-width: 1200px) {
   .chef-img {
@@ -544,17 +532,49 @@ span {
   .date p {
     font-size: 8px;
   }
-  /* .card-text{
-    text-align: center;
-    margin: 0 auto;
-} */
+ 
 }
 @media screen and (max-width: 768px) {
   .chef-card {
     margin: 0 auto;
-    /* text-align: center; */
   }
 }
+@media (max-width: 746px) {
+  .chef-card {
+    max-width: 100%;  
+    margin: 0 auto;
+  }
+
+  .chef-img {
+    width: 100%;      
+    max-width: 100%;
+    height: auto;
+  }
+
+  .chef-main-cntn p {
+    font-size: 15px;
+    max-width: 90%;
+    margin-bottom: 40px;
+  }
+
+  .chef-title {
+    font-size: 16px;
+  }
+
+  .chef-card p {
+    font-size: 13px;
+  }
+
+  .ad-date-com-sec {
+    flex-wrap: wrap;
+  }
+
+  .admin, .date, .comment {
+    margin-right: 5px;
+  }
+
+}
+
 /* footer media section */
 
 @media screen and (max-width: 993px) {

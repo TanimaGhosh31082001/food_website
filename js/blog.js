@@ -1,4 +1,5 @@
 //chef swipper
+
 const chefSwiper = new Swiper(".chef-swiper", {
   slidesPerView: 3,
   grid: {
@@ -11,6 +12,28 @@ const chefSwiper = new Swiper(".chef-swiper", {
     clickable: true,
   },
   loop: true,
+  breakpoints: {
+    0: {         
+      slidesPerView: 1,
+      grid: { rows: 2 },
+      spaceBetween: 15,
+    },
+    576: {       
+      slidesPerView: 2,
+      grid: { rows: 2 },
+      spaceBetween: 20,
+    },
+    746: {      
+      slidesPerView: 2,
+      grid: { rows: 2 },
+      spaceBetween: 25,
+    },
+    993: {      
+      slidesPerView: 3,
+      grid: { rows: 2 },
+      spaceBetween: 30,
+    },
+  },
 });
 
 // log in button
