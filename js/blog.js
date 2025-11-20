@@ -1,22 +1,16 @@
 //chef swipper
 const chefSwiper = new Swiper(".chef-swiper", {
-  loop: true,
   slidesPerView: 3,
-  spaceBetween: 30,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+  grid: {
+    rows: 2,
+    fill: "row",
   },
+  spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  breakpoints: {
-    320: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    993: { slidesPerView: 3 },
-    1400: { slidesPerView: 3 },
-  },
+  loop: true,
 });
 
 // log in button
